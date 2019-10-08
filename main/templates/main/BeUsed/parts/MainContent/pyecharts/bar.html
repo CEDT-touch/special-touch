@@ -1,0 +1,314 @@
+{% load staticfiles %}
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Bar 柱状图/条形图</h1>
+                    <a href="javascript:void(0);" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"
+                       onclick="refresh_bar_charts()">
+                        <i class="fas fa-redo fa-sm text-white-50"></i>
+                        刷新图表</a>
+                </div>
+
+                <!-- Content Row -->
+                <div class="row">
+
+                    <div class="col-xl-8 col-lg-7">
+
+                        <!-- Area Chart -->
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-success">图表</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-area" id="parent_chart_area">
+                                    <div id="bar" style="width:800px; height:360px;"></div>
+                                    <script>
+                                        var chart = echarts.init(document.getElementById('bar'), 'white', {renderer: 'canvas'});
+
+                                        $(
+                                            function () {
+                                                getData(chart);
+                                            }
+                                        );
+
+                                        function getData() {
+                                            $.ajax({
+                                                type: "GET",
+                                                url: "http://127.0.0.1:8000/returncharts/bar/",
+                                                dataType: 'json',
+                                                success: function (result) {
+                                                    chart.setOption(result.data);
+                                                }
+                                            });
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow mb-4">
+                            <a href="#collapseCardExample0" class="d-block card-header py-3" data-toggle="collapse"
+                               role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                <h6 class="m-0 font-weight-bold text-success">数据域</h6>
+                            </a>
+                            <div class="collapse" id="collapseCardExample0">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                            <!--<tr>-->
+                                            <!--<th>列1</th>-->
+                                            <!--<th>列2</th>-->
+                                            <!--<th>列3</th>-->
+                                            <!--<th>列4</th>-->
+                                            <!--<th>列5</th>-->
+                                            <!--<th>列6</th>-->
+                                            <!--</tr>-->
+                                            </thead>
+                                            <tfoot>
+                                            <!--<tr>-->
+                                            <!--<th>列1</th>-->
+                                            <!--<th>列2</th>-->
+                                            <!--<th>列3</th>-->
+                                            <!--<th>列4</th>-->
+                                            <!--<th>列5</th>-->
+                                            <!--<th>列6</th>-->
+                                            <!--</tr>-->
+                                            </tfoot>
+                                            <tbody>
+                                            <!--<tr>-->
+                                            <!--<td>Tiger Nixon</td>-->
+                                            <!--<td>System Architect</td>-->
+                                            <!--<td>Edinburgh</td>-->
+                                            <!--<td>61</td>-->
+                                            <!--<td>2011/04/25</td>-->
+                                            <!--<td>$320,800</td>-->
+                                            <!--</tr>-->
+                                            <!--<tr>-->
+                                            <!--<td>Garrett Winters</td>-->
+                                            <!--<td>Accountant</td>-->
+                                            <!--<td>Tokyo</td>-->
+                                            <!--<td>63</td>-->
+                                            <!--<td>2011/07/25</td>-->
+                                            <!--<td>$170,750</td>-->
+                                            <!--</tr>-->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 右侧边 -->
+                    <div class="col-xl-4 col-lg-5">
+                        <!-- Collapsable Card Example -->
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Accordion -->
+                            <a href="#collapseCardExample" class="d-block card-header py-3"
+                               data-toggle="collapse"
+                               role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                                <h6 class="m-0 font-weight-bold text-success">全局配置项</h6>
+                            </a>
+                            <!-- Card Content - Collapse -->
+                            <div class="collapse" id="collapseCardExample">
+                                <div class="card-body">
+
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label for="title" class="col-sm-4 control-label">标题</label>
+                                            <div class="col-sm-12">
+                                                <input type="text" class="form-control input-large" id="title"
+                                                       placeholder="请输入标题">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="subtitle" class="col-sm-4 control-label">副标题</label>
+                                            <div class="col-sm-12">
+                                                <input type="text" class="form-control" id="subtitle"
+                                                       placeholder="请输入副标题">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pos_left" class="col-sm-8 control-label">标题水平位置</label>
+                                            <div class="col-sm-12">
+                                                <div class="dropdown mb-4">
+                                                    <select name="pos_left" aria-controls="dataTable"
+                                                            id="pos_left"
+                                                            class="custom-select custom-select-sm form-control form-control-sm">
+                                                        <option value="left">靠左</option>
+                                                        <option value="center">居中</option>
+                                                        <option value="right">靠右</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pos_top" class="col-sm-8 control-label">标题竖直位置</label>
+                                            <div class="col-sm-12">
+                                                <div class="dropdown mb-4">
+                                                    <select name="pos_top" aria-controls="dataTable"
+                                                            id="pos_top"
+                                                            class="custom-select custom-select-sm form-control form-control-sm">
+                                                        <option value="top">靠上</option>
+                                                        <option value="middle">居中</option>
+                                                        <option value="bottom">靠下</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pos_left_lg"
+                                                   class="col-sm-8 control-label">图例水平位置</label>
+                                            <div class="col-sm-12">
+                                                <div class="dropdown mb-4">
+                                                    <select name="pos_left_lg" aria-controls="dataTable"
+                                                            id="pos_left_lg"
+                                                            class="custom-select custom-select-sm form-control form-control-sm">
+                                                        <option value="right">靠右</option>
+                                                        <option value="left">靠左</option>
+                                                        <option value="center">居中</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pos_top_lg"
+                                                   class="col-sm-8 control-label">图例竖直位置</label>
+                                            <div class="col-sm-12">
+                                                <select name="pos_top_lg" aria-controls="dataTable"
+                                                        id="pos_top_lg"
+                                                        class="custom-select custom-select-sm form-control form-control-sm">
+                                                    <option value="top">靠上</option>
+                                                    <option value="middle">居中</option>
+                                                    <option value="bottom">靠下</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="orient" class="col-sm-8 control-label">图例朝向</label>
+                                            <div class="col-sm-12">
+                                                <div class="dropdown mb-4">
+                                                    <select name="orient" aria-controls="dataTable" id="orient"
+                                                            class="custom-select custom-select-sm form-control form-control-sm">
+                                                        <option value="horizontal">水平</option>
+                                                        <option value="vertical">竖直</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fa-pull-right">
+                                            <a href="javascript:void(0);" class="btn btn-success btn-icon-split"
+                                               onclick=refresh_bar_charts()>
+                                                <span class="text">提交</span>
+                                                <span class="icon text-white-50">
+                                                          <i class="fas fa-check"></i>
+                                                        </span>
+                                            </a>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Accordion -->
+                            <a href="#collapseCardExample2" class="d-block card-header py-3"
+                               data-toggle="collapse"
+                               role="button" aria-expanded="false" aria-controls="collapseCardExample">
+                                <h6 class="m-0 font-weight-bold text-success">x轴设置</h6>
+                            </a>
+                            <!-- Card Content - Collapse -->
+                            <div class="collapse" id="collapseCardExample2">
+                                <div class="card-body">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label for="reversal_axis"
+                                                   class="col-sm-8 control-label">是否翻转</label>
+                                            <div class="col-sm-12">
+                                                <select name="reversal_axis" aria-controls="dataTable"
+                                                        id="reversal_axis"
+                                                        class="custom-select custom-select-sm form-control form-control-sm">
+                                                    <option value="not_reversal_axis">不翻转</option>
+                                                    <option value="reversal_axis">翻转</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="stack" class="col-sm-8 control-label">是否堆叠</label>
+                                            <div class="col-sm-12">
+                                                <select name="stack" aria-controls="dataTable" id="stack"
+                                                        class="custom-select custom-select-sm form-control form-control-sm">
+                                                    <option value="not_stack">不堆叠</option>
+                                                    <option value="stack_true">堆叠</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group fa-pull-right">
+                                            <a href="javascript:void(0);" class="btn btn-success btn-icon-split"
+                                               onclick=refresh_charts()>
+                                                <span class="text">提交</span>
+                                                <span class="icon text-white-50">
+                                                          <i class="fas fa-check"></i>
+                                                        </span>
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!--&lt;!&ndash; Collapsable Card Example &ndash;&gt;-->
+                        <!--<div class="card shadow mb-4">-->
+                        <!--&lt;!&ndash; Card Header - Accordion &ndash;&gt;-->
+                        <!--<a href="#collapseCardExample3" class="d-block card-header py-3" data-toggle="collapse"-->
+                        <!--role="button" aria-expanded="false" aria-controls="collapseCardExample">-->
+                        <!--<h6 class="m-0 font-weight-bold text-success">y轴设置</h6>-->
+                        <!--</a>-->
+                        <!--&lt;!&ndash; Card Content - Collapse &ndash;&gt;-->
+                        <!--<div class="collapse" id="collapseCardExample3">-->
+                        <!--<div class="card-body">-->
+                        <!--This is a collapsable card example using Bootstrap's built in collapse-->
+                        <!--functionality.-->
+                        <!--<strong>Click on the card header</strong> to see the card body collapse and expand!-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Accordion -->
+                            <a href="#collapseCardExample4" class="d-block card-header py-3"
+                               data-toggle="collapse"
+                               role="button" aria-expanded="false" aria-controls="collapseCardExample">
+                                <h6 class="m-0 font-weight-bold text-success">数据</h6>
+                            </a>
+                            <!-- Card Content - Collapse -->
+                            <div class="collapse" id="collapseCardExample4">
+                                <div class="card-body">
+                                    <div style="height:7rem;margin-bottom:10rem">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-lg-offset-1 mb-2"><span class="front_line">数据导入模板下载&nbsp;&nbsp;&nbsp;</span><i
+                                                    class="fa fa-download" aria-hidden="true" title="下载"
+                                                    onclick="window.open('static/demoBar.xlsx')"></i>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <form id="input-xlsx" enctype="multipart/form-data">
+                                                文件:<input id="input-file" type="file" name="file"/>
+                                            </form>
+                                        </div>
+                                        <div class="form-group fa-pull-right">
+                                            <a href="javascript:void(0);" class="btn btn-success btn-icon-split"
+                                               onclick=post_data()>
+                                                <span class="text">提交</span>
+                                                <span class="icon text-white-50">
+                                                          <i class="fas fa-check"></i>
+                                                        </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->

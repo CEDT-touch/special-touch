@@ -1,0 +1,347 @@
+body{
+	background-color:gainsboro;
+}
+button{
+	margin: 1%;
+}
+textarea{
+	background:#f5f5f5;
+	margin-top: 2%;
+	border-color: #7dc2bf;
+	box-shadow:0px -0.5px 2px 0px black;
+	
+}
+p{
+	margin: 0%;
+}
+i{
+	padding-right: 5px;
+}
+/* 自定义 */
+.main{
+	background-color: white;
+	width: 800px;
+	margin: 45px auto;
+	box-shadow: 0px 5px 12px 0px black;
+}
+.background{
+	height: 1188px;
+}
+.pageTop{
+	background: url(../img/pagetop.png) no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 4%;
+	position: relative;
+	top: 4%;
+	text-align: center;
+	
+}
+.pageBottom{
+	background: url(../img/pagebottom.png) no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 4%;
+	position: relative;
+	top: 90%;
+}
+.homeLogo{
+	background: url(../img/logo.png) no-repeat;
+	background-size: contain;
+	height: 20%;
+	width: 20%;
+	position: relative;
+	top: 8%;
+	left: 10%;
+}
+.homeTile{
+	position: relative;
+	top: 10%;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bolder;
+	color: white;
+	margin-top: 3%;
+	letter-spacing: 3px;
+}
+.homeSubTitle{
+	text-align: center;
+	position: relative;
+	top: 10%;
+	margin-top: 2%;
+	font-size: 30px;
+	color: white;
+}
+.homeBottomTitle{
+	text-align: center;
+	position: relative;
+	top: 45%;
+	font-size: 20px;
+	font-weight: bold;
+}
+.catalogImg{
+	text-align: center;
+	background: url(../img/catalog.png) no-repeat;
+	background-position: center;
+	position: relative;
+	top: 4%;
+	color: white;
+	letter-spacing: 6px;
+	font-size: 20px;
+}
+.catalogContent{
+	position: relative;
+	top: 5%;
+	left: 10%;
+	width: 80%;
+	line-height: 30px;
+}
+.catalogCategory{
+
+}
+.catalogContent-line{
+	background: url(../img/spot.png);
+	background-position: center;
+	width: 100%;
+}
+.catalogContent-line-title{
+	color: #000000;
+	font-size: 13px;
+	font-weight: bold;
+	background-color: white;
+	display: inline-block;
+}
+.catalogContent-line-item{
+	color: #000000;
+	font-size: 13px;
+	background-color: white;
+	display: inline-block;
+}
+.catalogContent-line-pagnum{
+	color: #000000;
+	font-size: 13px;
+	background-color: white;
+	float: right;
+}
+.menu{
+	position: fixed;
+	top: 50%;
+	right: 3%;
+	width: 6%;
+	height: 30%;
+	background-color: #19696d37;
+	text-align: center;
+}
+/* detail start */
+.defContent{
+	position: relative;
+	top: 5%;
+	left: 10%;
+	width: 80%;
+	line-height: 30px;
+}
+.defContent-title{
+	font-size: 22px;
+	font-weight: 900;
+	position: relative;
+	left: 10%;
+	top: 8%;
+	margin-bottom: 8%;
+	margin-top: 10%;
+}
+.defContent-detile{
+	text-indent: 2em;
+}
+.newsContent{
+	position: relative;
+	top: 3%;
+	left: 10%;
+	width: 80%;
+	line-height: 25px;
+}
+.newsContent_2{
+	position: relative;
+	left: 10%;
+	width: 80%;
+	line-height: 25px;
+}
+.newsContent-title{
+	text-align: left;
+	text-indent: 2em;
+	background: url(../img/cengtenttitle.png) no-repeat;
+	background-position: left;
+	position: relative;
+	top: 4%;
+	color: white;
+	font-size: 20px;
+	font-weight: 500;
+}
+.newsContent-subTitle{
+	margin-top: 5%;
+	margin-bottom: 5%;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 900;
+}
+.newsContent-source{
+	text-align: right;
+	margin-bottom: 2%;
+	font-size: 14px;
+}
+.newsContent-detile{
+	font-size: 14px;
+}
+/* detail end */
+/* lastPage */
+.lastPage-RQTop{
+	width: 23%;
+	position: relative;
+	top: 20%;
+	left: 17%;
+	text-align: center;
+}
+.lastPage-RQBottom{
+	width: 80%;
+	position: relative;
+	top: 18%;
+	left: 10%;
+	text-align: center;
+}
+.left{
+	display: inline-block;
+	margin-right: 5%;
+}
+.right{
+	display: inline-block;
+	margin-left: 5%;
+}
+.lastPage-RQ1{
+	background: url(../img/RQ1.png) no-repeat;
+	width: 180px;
+	height: 180px;
+	background-position: center;
+	background-size: contain;
+}
+.lastPage-RQ2{
+	background: url(../img/RQ2.jpg) no-repeat;
+	width: 180px;
+	height: 180px;
+	background-position: center;
+	background-size: contain;
+}
+.lastPage-RQ3{
+	background: url(../img/RQ3.jpg) no-repeat;
+	width: 180px;
+	height: 180px;
+	background-position: center;
+	background-size: contain;
+}
+.lastPage-div1{
+	position: relative;
+	top: 10%;
+	left: 42%;
+	width: 50%;
+}
+.lastPage-div1-title1{
+	position: relative;
+	left: 50px;
+	font-size: 30px;
+	color: #0ca498;
+	font-weight: bolder;
+}
+.lastPage-div1-title2{
+	position: relative;
+	left: 50px;
+	font-size: 26px;
+	font-weight: bolder;
+}
+.lastPage-div1-title2 #p1{
+	color: dimgray;
+}
+.lastPage-div1-title2 #p1 i{
+	color: black;
+	padding-top:5px;
+	float:left;
+}
+.lastPage-div1-title2 #p2{
+	color: darkgoldenrod;
+}
+.lastPage-div1-title2 #p2 i{
+	color: black;
+	padding-top:5px;
+	float:left;
+}
+.lastPage-div2{
+	background: #0CA498;
+	width: 80%;
+	height: 18%;
+	position: relative;
+	top: 15%;
+	left: 10%;
+	border-radius: 20px;
+	color: white;
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 3.3rem;
+}
+.one{
+	position: relative;
+	top: 10%;
+}
+.div2-p1{
+	position: relative;
+	left: 5%;
+	display: inline-block;
+}
+.div2-p2{
+	position: relative;
+	left: 20%;
+	display: inline-block;
+
+}
+/* lastPage end */
+.login{
+    display:none;
+    border:0.1em solid #7dc2bf;
+    height:auto;
+    width:50%;
+    position:absolute;/*让节点脱离文档流,从页面上浮出来,不再按照文档其它内容布局*/
+    top:24%;/*节点脱离了文档流,如果设置位置需要用top和left,right,bottom定位*/
+    left:24%;
+    z-index:2;/*层级关系,由于这个节点要在顶部显示,所以这个值比其余节点的都大*/
+    background: white;
+}
+.over{
+    width: 100%;
+    height: 100%;
+    opacity:0.8;/*设置背景色透明度,1为完全不透明,IE需要使用filter:alpha(opacity=80);*/
+    filter:alpha(opacity=80);
+    display: none;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    background: silver;
+}
+.login2{
+    display:none;
+    height:auto;
+    width:50%;
+    position:fixed;/*让节点脱离文档流,从页面上浮出来,不再按照文档其它内容布局*/
+    top:45%;/*节点脱离了文档流,如果设置位置需要用top和left,right,bottom定位*/
+    left:24%;
+    z-index:2;/*层级关系,由于这个节点要在顶部显示,所以这个值比其余节点的都大*/
+    text-align: center;
+}
+.over2{
+    width: 100%;
+    height: 200%;
+    opacity:0.8;/*设置背景色透明度,1为完全不透明,IE需要使用filter:alpha(opacity=80);*/
+    filter:alpha(opacity=80);
+    display: none;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    background: silver;
+}

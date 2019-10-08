@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- 引入静态文件的声明-->
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>模板3</title>
+		<meta name="author" content="LiangLiang" />
+		<link rel="stylesheet" href="{% static 'templates/report/report3/css/base.css' %}" />
+		<link rel="stylesheet" href="{% static 'templates/report/report3/css/mybutton.css' %}" />
+		<!-- font awesome -->
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<!--jquery-->
+		<script src="{% static 'templates/report/report3/js/jquery.js' %}"></script>
+	</head>
+	<body>
+		<div class="login" id="login"></div>
+		<div class="over" id="over"></div>
+		<div class="login2" id="login2">
+			<i class="fa fa-spinner fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+			<p>Loading...</p>
+		</div>
+		<div class="over2" id="over2"></div>
+		
+		<!--（封面） -->
+		<div class="main" id="home">
+			<div class="background" style="background: url({% static 'templates/report/report3/img/background.jpg' %}) no-repeat;background-size: contain;">
+				<div class="homeLogo"></div>
+				<div class="homeTile" id="home_title0">《智能制造产业》</div>
+				<div class="homeTile" id="home_title1">监测月报</div>
+				<div class="homeSubTitle" id="home_subTitle">（2019年6月）</div>
+				<div class="homeBottomTitle">赛迪顾问股份有限公司</div>
+				
+			</div>
+		</div>
+
+		<div id="category">
+
+		</div>
+		
+		<!-- <div style="margin-left:78.6%;margin-top:0.25%;">
+			<input type="button" value="添加" id="bt" />
+		</div> -->
+	<!-- 侧边菜单 -->	
+	<div class="menu">
+		<button  class="button-1" id="export1" name="导出" type="button" onclick="NumberToChinese(3)">导出</button>
+<!--		<button class="button-2" id="save1" name="保存" type="button" onclick="getReport3Data()">生成</button>-->
+		<button class="button-3" id="exit1" name="退出" type="button" onclick="closeReport()">退出</button>
+	</div>
+		
+	<script src="{% static 'templates/report/report3/js/elementMove.js' %}"></script>
+	<script src="{% static 'templates/report/report3/js/action.js' %}"></script>
+	<script src="{% static 'templates/report/report3/js/load.js' %}"></script>
+	<script src="{% static 'templates/report/report3/js/toChinese.js' %}"></script>
+		<script>
+			getReport3Data();
+		</script>
+	<!-- <script src="js/addOrDelete.js"></script> -->
+	</body>
+</html>

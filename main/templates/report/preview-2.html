@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<!-- 引入静态文件的声明-->
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'templates/report/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'templates/report/css/preview.css'%}">
+    <title>Document-preview</title>
+</head>
+
+<body>
+    <div class="container-fluid d-flex flex-column" id="app">
+        <div class="btn-width my-3 align-self-end">
+            <button class="btn btn-info btn-sm" type="button" @click="pdfExport">导出</button>
+        </div>
+        <main class="align-self-center" ref='pdf' id='pdf'>
+            <div class="bg-ff a4-shadow mb-4 align-self-center">
+                <div class="a4">
+                    <div class="time-line">
+                        <div class="time-title w-100">
+                            产业新闻
+                            <div>大事记TOP5</div>
+                        </div>
+                        <div class="trackCol d-flex flex-column justify-content-start">
+                            <div class="unit d-flex justify-content-center align-items-center"
+                                v-for="(item,i) in top_five_events">
+                                <div class="editor" v-if="item.toggle">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" v-model="item.date">
+                                        <textarea class="form-control mt-2" type="text"
+                                            v-model="item.descripion"></textarea>
+                                    </div>
+                                </div>
+                                <div class="date" @click.stop="top_five_change(i)">[[item.date]]</div>
+                                <div class="event d-flex flex-column justify-content-center"
+                                    @click.stop="top_five_change(i)">
+                                    <div class="circle"></div>
+                                    <div>[[item.descripion]]</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gray">
+                        <div class="title">
+                            医药健康产业
+                        </div>
+                        <div class="year">
+                            2019
+                        </div>
+                        <div class="month">
+                            二月月报
+                        </div>
+                        <div class="headLine">
+                            本月头条 》
+                            <div class="headDetail" @click="headDetail.toggle=!headDetail.toggle">
+                                <div class="editor" v-if="headDetail.toggle">
+                                    <div class="form-group">
+                                        <textarea class="form-control" type="text"
+                                            v-model="headDetail.content"></textarea>
+                                    </div>
+                                </div>
+                                [[headDetail.content]]
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upper—pic">
+                        <div class="brand">
+                            赛迪顾问
+                            <div class="slogan">
+                                思 维 创 造 世 界
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lower-box">
+                        <div class="mainIntro d-flex flex-column">
+                            <div class="editor" v-if="mainIntro.toggle">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" v-model="mainIntro.mainTitle">
+                                    <textarea class="form-control" type="text"
+                                        v-model="mainIntro.mainDetail"></textarea>
+                                </div>
+                            </div>
+                            <div class="mainTitle align-self-center" @click.stop="mainIntro.toggle=!mainIntro.toggle"
+                                v-html>
+                                [[mainIntro.mainTitle]]
+                            </div>
+                            <div class="mainDetail" @click.stop="mainIntro.toggle=!mainIntro.toggle">
+                                <p style="white-space: pre-wrap">[[mainIntro.mainDetail]]
+                                </p>
+                            </div>
+
+                        </div>
+                        <footer>www.mtx.cn</footer>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-ff a4-shadow mb-4 align-self-center">
+                <div class="a4 bg-e6">
+                    <div class="w-100 d-flex topLine mb-2">
+                        <div class="num">
+                            2
+                        </div>
+                        <div class="sectionTitle">CDE药品审评情况分析
+                        </div>
+                        <div class="fixedTitle">医药健康产业月报 2月
+                        </div>
+                    </div>
+                    <div class="px-5 h-100">
+                        <div class="sectionUnit-fit">
+                            <div class="temp-name">概述</div>
+                            <div class="temp-box d-flex justify-content-center">
+                                <div class="textBox-l">
+                                    <p style="text-align: left;"><span style="font-size: 1rem;">&nbsp; &nbsp;&nbsp;</span><span style="font-size: 1rem;">2019年3月份CDE共承 办新的药品注册申请以 受理号计有</span><span style="font-size: 1rem;">534</span><span style="font-size: medium;">个（复审除外），同比降低3.0%，环比增加15.1%。</span></p><p style="text-align: left;"><span style="font-size: 1rem;">&nbsp; &nbsp;&nbsp;</span><span style="font-size: 1rem;">其中化药430个，</span><span style="font-size: 1rem;">中药</span>28<span style="font-size: 1rem;">个，生物制品</span>76<span style="font-size: 1rem;">个。</span></p>
+                                </div>
+                                <div class="picBox-r" id="pic1">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sectionUnit-md">
+                            <div class="temp-name">{{database.N1}}</div>
+                            <div class="temp-box d-flex justify-content-center flex-column">
+                                <div class="picBox-t" id="pic2">
+                                </div>
+                                <div class="textBox-b">
+                                    {{database.D1}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>www.mtx.cn</footer>
+                </div>
+            </div>
+            <div class="bg-ff a4-shadow mb-4 align-self-center">
+                <div class="a4 bg-e6">
+                    <div class="w-100 d-flex topLine mb-2">
+                        <div class="fixedTitle">医药健康产业月报 2月
+                        </div>
+                        <div class="sectionTitle">生物制药市场动态监测
+                        </div>
+                        <div class="num">
+                            3
+                        </div>
+                    </div>
+                    <div class="editor" v-if="triple_text.toggle">
+                        <div class="form-group">
+                            <input class="form-control" type="text" v-model="triple_text.mainState">
+                            <input class="form-control" type="text" v-model="triple_text.firstState">
+                            <input class="form-control" type="text" v-model="triple_text.secondState">
+                        </div>
+                    </div>
+                    <div class="px-5 h-100" @click.stop="triple_text.toggle=!triple_text.toggle">
+                        <p>[[triple_text.mainState]]</p>
+                        <div class="sectionUnit-half mb-4 mt-2">
+                            <div class="temp-box d-flex flex-column align-items-center">
+                                <p>[[triple_text.firstState]]</p>
+                                <div id="pic3"></div>
+                            </div>
+                        </div>
+                        <div class="sectionUnit-half">
+                            <div class="temp-box d-flex flex-column align-items-center">
+                                <p>[[triple_text.secondState]]</p>
+                                <div id="pic4"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>www.mtx.cn</footer>
+                </div>
+            </div>
+            <div class="bg-ff a4-shadow mb-4 align-self-center">
+                <div class="a4 bg-e6">
+                    <div class="w-100 d-flex topLine mb-2">
+                        <div class="num">
+                            4
+                        </div>
+                        <div class="sectionTitle">重点政策法规梳理
+                        </div>
+                        <div class="fixedTitle">医药健康产业月报 2月
+                        </div>
+                    </div>
+                    <div class="px-5 h-100">
+                        <table class="w-100">
+                            <thead>
+                                <tr>
+                                    <th scope="col">发布时间</th>
+                                    <th scope="col">政策法规名称</th>
+                                    <th scope="col">发布单位</th>
+                                    <th scope="col">影响指数</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for='(item,i) in tableData' @click="changetable(i)" :key="i">
+
+                                    <th scope="row">[[item.date]]
+                                        <div class="editor-sm" v-if="item.toggle">
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" v-model="item.date" @click.stop>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <td style="white-space: pre-wrap">[[item.title]]<div class="editor-lg"
+                                            v-if="item.toggle">
+                                            <div class="form-group">
+                                                <textarea class="form-control" type="text" v-model="item.title"
+                                                    @click.stop></textarea>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="white-space: pre-wrap">[[item.institution]]<div class="editor-md"
+                                            v-if="item.toggle">
+                                            <div class="form-group">
+                                                <textarea class="form-control" type="text" v-model="item.institution"
+                                                    @click.stop></textarea>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>[[item.value]]
+                                        <div class="editor-xs" v-if="item.toggle">
+                                            <div class="form-group">
+                                                <input class="form-control" type="number" v-model="item.value"
+                                                    @click.stop>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="note" @click="note.toggle=!note.toggle">
+                            [[note.content]]
+                        </p>
+                        <div class="editor-lg" v-if="note.toggle">
+                            <div class="form-group">
+                                <textarea class="form-control" type="text" v-model="note.content"
+                                    @click.stop></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>www.mtx.cn</footer>
+                </div>
+            </div>
+            <div class="bg-ff a4-shadow mb-4 align-self-center">
+                <div class="a4 bg-e6">
+                    <div class="w-100 d-flex topLine mb-2">
+                        <div class="fixedTitle">医药健康产业月报 2月
+                        </div>
+                        <div class="sectionTitle">重点企业动态回顾
+                        </div>
+                        <div class="num">
+                            5
+                        </div>
+                    </div>
+                    <div class="px-5 h-100 row mt-5" style="position: relative">
+                        <div class="col-4 d-flex flex-column justify-content-start">
+                            <div class="unit-sm d-flex justify-content-center align-items-center"
+                                v-for='(item,i) in lineData.slice(0, 6)'>
+                                <div class="editor" v-if="item.toggle">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" v-model="item.date">
+                                        <textarea class="form-control mt-2" type="text"
+                                            v-model="item.content"></textarea>
+                                    </div>
+                                </div>
+                                <div class="date" @click.stop="item.toggle=!item.toggle">[[item.date]]</div>
+                                <div class="event d-flex flex-column justify-content-center"
+                                    @click.stop="item.toggle=!item.toggle">
+                                    <div class="circle"></div>
+                                    <div>[[item.content]]</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="green_line" style="top: 78%;left: 15%;"></div>
+                        <div class="col-4 d-flex flex-column justify-content-start">
+                            <div class="unit-sm d-flex justify-content-center align-items-center"
+                                v-for='(item,i) in lineData.slice(6, 12).reverse()'>
+                                <div class="editor" v-if="item.toggle">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" v-model="item.date">
+                                        <textarea class="form-control mt-2" type="text"
+                                            v-model="item.content"></textarea>
+                                    </div>
+                                </div>
+                                <div class="date" @click.stop="item.toggle=!item.toggle">[[item.date]]</div>
+                                <div class="event d-flex flex-column justify-content-center"
+                                    @click.stop="item.toggle=!item.toggle">
+                                    <div class="circle"></div>
+                                    <div>[[item.content]]</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="green_line" style="top: 0%;left: 44.333%;"></div>
+                        <div class="col-4 d-flex flex-column justify-content-start">
+                            <div class="unit-sm d-flex justify-content-center align-items-center"
+                                v-for='(item,i) in lineData.slice(12, 18)'>
+                                <div class="editor" v-if="item.toggle">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" v-model="item.date">
+                                        <textarea class="form-control mt-2" type="text"
+                                            v-model="item.content"></textarea>
+                                    </div>
+                                </div>
+                                <div class="date" @click.stop="item.toggle=!item.toggle">[[item.date]]</div>
+                                <div class="event d-flex flex-column justify-content-center"
+                                    @click.stop="item.toggle=!item.toggle">
+                                    <div class="circle"></div>
+                                    <div>[[item.content]]</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>www.mtx.cn</footer>
+                </div>
+            </div>
+            <div class="bg-ff a4-shadow mb-4 align-self-center">
+                <div class="a4 bg-e6">
+                    <div class="w-100 d-flex topLine mb-2">
+                        <div class="num">
+                            6
+                        </div>
+                        <div class="sectionTitle">投融资市场分析
+                        </div>
+                        <div class="fixedTitle">医药健康产业月报 2月
+                        </div>
+                    </div>
+                    <div class="px-5 h-100">
+                        <div class="sectionUnit-fit">
+                            <div class="temp-name">{{database.N3}}</div>
+                            <div class="temp-box d-flex justify-content-center">
+                                <div class="picBox-l" id="pic5">
+
+                                </div>
+                                <div class="textBox-r">
+                                    {{database.D3}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sectionUnit-half">
+                            <div class="temp-name">发生领域分布</div>
+                            <div class="temp-box d-flex justify-content-start flex-column">
+                                <div class="picBox-a">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>www.mtx.cn</footer>
+                </div>
+            </div>
+            <div class="bg-ff a4-shadow mb-4 align-self-center">
+                <div class="a4 bg-e6">
+                    <div class="w-100 d-flex topLine mb-2">
+                        <div class="fixedTitle">医药健康产业月报 2月
+                        </div>
+                        <div class="sectionTitle">重点会议回顾
+                        </div>
+                        <div class="num">
+                            7
+                        </div>
+                    </div>
+                    <div class="px-5 h-100 d-flex flex-column justify-content-start">
+                        <div class="sectionUnit-md">
+                            <div class="temp-name">圆桌研讨会</div>
+                            <div class="temp-box d-flex flex-column justify-content-start">
+                                <div class="picBox-t d-flex">
+                                    <div class="picBox-l">
+
+                                    </div>
+                                    <div class="picBox-r">
+
+                                    </div>
+                                </div>
+                                <div class="textBox-b text-sm"
+                                    @click.stop="back_to_meeting[0].toggle=!back_to_meeting[0].toggle">
+                                    [[back_to_meeting[0].content]]
+                                    <div class="editor-xl" v-if="back_to_meeting[0].toggle">
+                                        <div class="form-group">
+                                            <textarea class="form-control mt-2" type="text"
+                                                v-model="back_to_meeting[0].content" @click.stop></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="sectionUnit-sm">
+                            <div class="temp-name">产业大脑</div>
+                            <div class="temp-box d-flex justify-content-start flex-column">
+                                <div class="picBox-t d-flex">
+                                    <div class="picBox-l">
+
+                                    </div>
+                                    <div class="picBox-r">
+
+                                    </div>
+                                </div>
+                                <div class="textBox-b text-sm"
+                                    @click.stop="back_to_meeting[1].toggle=!back_to_meeting[1].toggle">
+                                    [[back_to_meeting[1].content]]
+                                    <div class="editor-xl" v-if="back_to_meeting[1].toggle">
+                                        <div class="form-group">
+                                            <textarea class="form-control mt-2" type="text"
+                                                v-model="back_to_meeting[1].content" @click.stop></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>www.mtx.cn</footer>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+</body>
+<script src="{% static 'templates/report/js/jquery.js' %}"></script>
+<script src="{% static 'templates/report/js/bootstrap.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="{% static 'templates/report/js/axios.js' %}"></script>
+
+<script src="{% static 'templates/report/js/jspdf.debug.js' %}"></script>
+<script src="{% static 'templates/report/js/html2canvas.js' %}"></script>
+<script src="{% static 'templates/report/js/echarts.js' %}"></script>
+<script src="{% static 'templates/report/content-change.js' %}"></script>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts图表
+        var myChart = echarts.init(document.getElementById('pic1'));
+                    // 指定图表的配置项和数据
+                    var option1 = {
+                        title: {
+                            text: '图1 2019年2月CDE药品受理情况',
+                            x: 'center',
+                            y: 'bottom'
+                        },
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: "{a} <br/>{b} : {c} ({d}%)"
+                        },
+                        textStyle: {
+                            color: '#000000'
+                        },
+                        labelLine: {
+                            lineStyle: {
+                                color: '#000000'
+                            }
+                        },
+                        series: [{
+                            name: '类别',
+                            type: 'pie',
+                            radius: '70%',
+                            center: ['50%', '45%'],
+                            color: ['#C5E0B4', '#88A674', '#548235'],
+                            data: [
+                                { value: 430, name:'化药'},
+                                { value: 28, name: '中药'},
+                                { value: 76, name: '生物制药'},
+                            ]
+                        }],
+                    };
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option1);
+
+        var myChart2 = echarts.init(document.getElementById('pic2'));
+                    var option2 = {
+                        title: {
+                            text: '图2 2019年2月CDE各药品类型受理情况 ',
+                            x: 'center',
+                            y: 'bottom'
+                        },
+                        legend: {
+                            data: ['化学', '中药', '生物制药'],
+
+                        },
+                        xAxis: {
+                            type: 'category',
+                            data: ['新药', '进口', '进口再注册', '仿制', '补充申请', '其它']
+                        },
+                        yAxis: {},
+                        series: [
+
+                            {
+                                type: 'bar',
+                                label: {
+                                    normal: {
+                                        show: true,
+                                        color: '#000000',
+                                        position: 'top'
+                                    }
+                                },
+                                color: ['#C5E0B4'],
+                                name: '化学',
+                                data: [6, 90, 30, 20, 50, 60]
+                            },
+                            {
+                                type: 'bar',
+                                label: {
+                                    normal: {
+                                        color: '#000000',
+                                        show: true,
+                                        position: 'top'
+                                    }
+                                },
+                                color: ['#88A674'],
+                                name: '中药',
+                                data: [30, 70, 80, 70, 60, 50]
+                            },
+                            {
+                                type: 'bar',
+                                label: {
+                                    normal: {
+                                        show: true,
+                                        color: '#000000',
+                                        position: 'top'
+                                    }
+                                },
+                                color: ['#548235'],
+                                name: '生物制药',
+                                data: [80, 70, 40, 90, 700, 500]
+                            },
+
+
+                        ]
+                    }
+                    myChart2.setOption(option2);
+
+        var myChart = echarts.init(document.getElementById('pic3'));
+
+                    // 指定图表的配置项和数据
+                    var option4 = {
+                        title: {
+                            text: '图3 2019年全国生物制品企业累计销售额TOP10排名（截至2月28日）',
+                            x: 'center',
+                            y: 'bottom'
+                        },
+                        grid: {
+                            x: 200,
+                            borderWidth: 1
+                        },
+                        xAxis: {
+
+                        },
+                        yAxis: {
+                            type: 'category',
+                            data: ['a','b','c']
+                        },
+                        series: [{
+                            name: '销量',
+                            type: 'bar',
+                            color: ['#548235'],
+                            barCategoryGap: 15,
+                            label: {
+                                normal: {
+                                    color: '#000000',
+                                    show: true,
+                                    position: 'right'
+                                }
+                            },
+                            data: [1,2,3]
+                        }]
+                    };
+
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option4);
+
+        var myChart = echarts.init(document.getElementById('pic4'));
+
+                    // 指定图表的配置项和数据
+                    var option = {
+                        title: {
+                            text: '图4 2019年全国各类生物制品累计销售额TOP10排名（截至2月28日）',
+                            x: 'center',
+                            y: 'bottom'
+                        },
+                        grid: {
+                            x: 200,
+                            borderWidth: 1
+                        },
+                        xAxis: {
+
+                        },
+                        yAxis: {
+                            type: 'category',
+                            data: ['b','g','f']
+                        },
+                        series: [{
+                            name: '销量',
+                            type: 'bar',
+                            color: ['#548235'],
+                            barCategoryGap: 15,
+                            label: {
+                                normal: {
+                                    color: '#000000',
+                                    show: true,
+                                    position: 'right'
+                                }
+                            },
+                            data: [54,65,99]
+                        }]
+                    };
+
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+
+        var myChart = echarts.init(document.getElementById('pic5'));
+                    var option = {
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                                type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                            }
+                        },
+                        grid: {
+                            x: 60,
+                            y2:120,
+                            borderWidth: 1
+                        },
+                        legend: {
+                            data: ['未公开', '100万元 - 1000万元', '1000万元 - 1亿元', '1亿元以上'],
+                            y: 'bottom'
+                        },
+                        xAxis: {
+                            type: 'value'
+                        },
+                        yAxis: {
+                            type: 'category',
+                            data: ['其他','外包','医药','器械','基因检测','医疗服务']
+                        },
+                        series: [
+                            {
+                                name: '未公开',
+                                type: 'bar',
+                                stack: '总量',
+                                barWidth : 15,
+                                data: [54,66,99,55,33,555]
+                            },
+                            {
+                                name: '100万元 - 1000万元',
+                                type: 'bar',
+                                stack: '总量',
+
+                                data: [99,77,84,65,12,45]
+                            },
+                            {
+                                name: '1000万元 - 1亿元',
+                                type: 'bar',
+                                stack: '总量',
+
+                                data: [63,54,68,89,22,12]
+                            },
+                            {
+                                name: '1亿元以上',
+                                type: 'bar',
+                                stack: '总量',
+
+                                data: [54,68,63,23,54,87]
+                            },
+
+                        ]
+                    };
+                    myChart.setOption(option);
+
+
+</script>

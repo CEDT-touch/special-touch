@@ -1,0 +1,475 @@
+html, body {
+    background-color: #525659;
+    height: 100%;
+    overflow: auto;
+}
+
+.btn-width {
+    width: 5%
+}
+
+.a4 {
+    position: relative;
+    width: 800px;
+    background-color: #ffffff;
+    height: 1400px !important;
+    overflow: hidden;
+}
+
+.bg-ff {
+    background-color: #ffffff
+}
+
+.px-6 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.a4-shadow {
+    box-shadow: 0 2px 6px #000000;
+    border: 1px solid #000000;
+}
+
+.temp-name {
+    width: fit-content;
+    font-weight: bold;
+    font-size: 2.25rem;
+    position: relative;
+    top: 1.2rem;
+    left: 2rem;
+    background-color: #e6e6e6
+}
+
+.temp-box {
+    height: 90%;
+    border-style: dashed;
+    border-width: 1.25px;
+    border-color: #41719C;
+    padding: 1rem 1.25rem 0 1.25rem;
+}
+
+.time-line {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    height: 74%;
+    width: 33%;
+    background-color: #17A0DF;
+    color: #ffffff;
+    border-width: 3px;
+    border-color: #ffffff;
+    border-style: solid;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.upper—pic {
+    width: 100%;
+    height: 38%;
+    box-sizing: border-box;
+    border-width: 0 0 15px 0;
+    border-bottom-color: #8CC02A;
+    border-style: solid;
+    background: url(../img/upper_img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gray {
+    position: absolute;
+    width: 100%;
+    height: 37%;
+    background: url(../img/gray.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    position: absolute;
+    padding-left: 3%;
+    padding-top: 12%;
+    height: 100%;
+    color: #8CC02A;
+    font-size: 2.5rem;
+    width: 2rem;
+    font-weight: bolder;
+    line-height: 1;
+}
+
+.year {
+    padding-top: 2%;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    height: 32%;
+    color: white;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: 16px;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+}
+
+.month {
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    height: 32%;
+    color: white;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    line-height: 1;
+    writing-mode: vertical-rl;
+    padding-right: 1%;
+    border-right: #ffffff 2px solid
+}
+
+.headLine {
+    position: absolute;
+    left: 24%;
+    top: 20%;
+    height: 32%;
+    width: 19%;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.headDetail {
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.brand {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    color: #0C6252;
+    font-size: 2.25rem;
+    font-weight: 600;
+    font-family: SimSun;
+    line-height: 1
+}
+
+.slogan {
+    font-size: 1rem;
+    text-align: center
+}
+
+.lower-box {
+    width: 100%;
+    height: 62%;
+    background-color: #e6e6e6
+}
+
+.time-title {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+.trackCol {
+    margin-top: 32px;
+    height: 100%;
+}
+
+.unit {
+    position: relative;
+    width: 100%;
+    min-height: 17%;
+    height: fit-content;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.unit-sm {
+    position: relative;
+    width: 100%;
+    min-height: 13%;
+    height: fit-content;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.date {
+    box-sizing: border-box;
+    width: 25%;
+    display: inline-block;
+    padding: 0.5rem;
+}
+
+.circle {
+    position: absolute;
+    top: 46%;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: #e6e6e6;
+    box-sizing: border-box;
+    border-radius: 100%
+}
+
+.event {
+    position: relative;
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    box-sizing: border-box !important;
+    border-left: #ffffff 1px solid;
+    padding: 0 0 0 16px;
+    vertical-align: middle;
+}
+
+.mainIntro {
+    position: absolute;
+    left: 45%;
+    height: 100%;
+    width: 55%;
+}
+
+.mainTitle {
+    color: #000000;
+    font-weight: 600;
+    font-size: 1.75rem;
+    padding: 2rem 3.5rem;
+}
+
+.mainDetail {
+    color: #000000;
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding: 0 32px 0 16px
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1.5rem;
+    color: rgb(10, 55, 97);
+    text-align: center;
+    font-size: 1.3rem
+}
+
+.bg-e6 {
+    background-color: #e6e6e6
+}
+
+.topLine {
+    padding-top: 70px;
+    height: 10%;
+}
+
+.num {
+    width: 8%;
+    height: 100%;
+    color: #ffffff;
+    background-color: #8CC02A;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 70px;
+}
+
+.sectionTitle {
+    width: 46%;
+    height: 100%;
+    border-top: #8CC02A 1px solid;
+    border-bottom: #8CC02A 1px solid;
+    color: #000000;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 70px;
+}
+
+.fixedTitle {
+    width: 46%;
+    height: 100%;
+    color: #ffffff;
+    background-color: #8CC02A;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 70px;
+}
+
+.textBox-l {
+    width: 40%;
+    padding: 12px;
+
+}
+
+.textBox-r {
+    width: 40%;
+    padding: 12px;
+
+}
+
+.picBox-r {
+    width: 60%;
+}
+
+.picBox-l {
+    width: 60%;
+}
+
+.picBox-t {
+    width: 100%;
+    height: 50%
+}
+
+.textBox-b {
+    width: 100%;
+    height: 50%;
+    padding: 12px;
+
+}
+
+.textBox-r span, .textBox-l span{
+    font-size: 1.55rem !important;
+}
+
+.textBox-b span{
+    font-size: 1.3rem !important;
+}
+
+.picBox-a {
+    width: 100%;
+    height: 80%
+}
+
+.sectionUnit-sm {
+    height:28%;
+}
+
+.sectionUnit-fit {
+    height:fit-content
+}
+
+.sectionUnit-md {
+    height: 52%;
+}
+
+.sectionUnit-half {
+    height: 40%;
+}
+
+p {
+    margin: 0;
+    font-size: 1.55rem;
+}
+
+table {
+    height: 70%;
+    text-align: center
+}
+
+thead th {
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: #8CC02A;
+    color: #ffffff;
+}
+
+tbody td, tbody th {
+    border-bottom: #000000 1px solid;
+    font-size: 1rem;
+    color: #000000;
+}
+
+tbody td {
+    border-left: #ffffff 1px solid;
+}
+
+tbody th, tbody :nth-child(4) {
+    width: 11%;
+}
+
+.note {
+    font-size: 1rem;
+    color: #000000;
+    padding: 2rem 0;
+    height: fit-content;
+}
+
+.col-4 .date, .col-4 .event {
+    font-size: 1rem;
+    color: #000000;
+}
+
+.col-4 .event {
+    border-left: #41719C 1px solid;
+}
+
+.col-4 .circle {
+    background-color: #8CC02A
+}
+
+.text-sm{
+    font-size: 1.2rem;
+    color: #000000;
+    padding: 1.5rem 0;
+}
+
+
+.editor{
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    z-index: 999;
+}
+
+.editor-xs{
+    position: absolute;
+    height: fit-content;
+    width: 7%;
+    z-index: 999;
+}
+.editor-sm{
+    position: absolute;
+    height: fit-content;
+    width: 10%;
+    z-index: 999;
+}
+.editor-lg{
+    position: absolute;
+    height: fit-content;
+    width: 40%;
+    z-index: 999;
+}
+.editor-md{
+    position: absolute;
+    height: fit-content;
+    width: 29%;
+    z-index: 999;
+}
+.editor-xl{
+    position: absolute;
+    height: fit-content;
+    width: 82%;
+    z-index: 999;
+}
+#pic3,#pic4{
+    width: 100%;
+    height: 100%;
+}
+main{
+    width: 800px;
+}
+.green_line{
+    position: absolute;
+    height: 1px;
+    width: 29.3%;
+
+    background-color: #41719C
+}

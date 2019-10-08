@@ -1,0 +1,138 @@
+.welcome-top{
+	margin-left: 30px;
+	margin-top: 5%;
+	margin-bottom: 60px;
+}
+.top-uesrimg{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: url(/static/img/2.jpg) no-repeat;
+	background-size: cover;
+	display: inline-block;
+	vertical-align: middle;
+}
+.top-mainblock{
+	vertical-align: middle;
+	display: inline-block;
+	margin-left: 20px;
+}
+.top-info1{
+	display: inline-block;
+	line-height: 70px;
+	color: seagreen;
+	font-size: large;
+	font-weight: bold;
+	
+}
+.top-block1{
+	color: dimgray;
+	font-size: small;
+}
+.top-info2{
+	display: inline-block;
+}
+.top-info2 a {
+	color: red;
+	font-size: large;
+}
+.top-info3{
+	display: inline-block;
+	margin-left: 50px;
+}
+.welcome-content{
+	width: 100%;
+	background-color: #305497;
+	margin-left:0;
+	margin-right:0;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.welcome-content table{
+	width: 75%;
+	margin-left: 7%;
+	border-collapse:separate; 
+	border-spacing:25px;
+	
+}
+.content-row1-1{
+	width: 140px;
+	height: 60px;
+	color: white;
+	font-weight: bold;
+	
+}
+.content-row1-2{
+	width: 135px;
+	height: 60px;
+	background-color: lightblue;
+	box-shadow:  1px 2px 8px 2px #4f3964;
+	cursor: pointer;
+	transition: all 0.1s;
+}
+.content-row1-2:hover{
+	transform: scale(1.1);
+}
+.content-row2-1{
+	width: 140px;
+	height: 60px;
+	color: white;
+	font-weight: bold;
+	
+}
+.content-row2-2{
+	width: 135px;
+	height: 60px;
+	background-color: honeydew;
+	box-shadow:  1px 2px 8px 2px #4f3964;
+	cursor: pointer;
+	transition: all 0.1s;
+}
+.content-row2-2:hover{
+	transform: scale(1.1);
+}
+.content-row3-1{
+	width: 140px;
+	height: 60px;
+	color: white;
+	font-weight: bold;
+	
+}
+.content-row3-2{
+	width: 135px;
+	height: 60px;
+	background-color: lightpink;
+	box-shadow:  1px 2px 8px 2px #4f3964;
+	
+	cursor: pointer;
+	transition: all 0.1s;
+}
+.content-row3-2:hover{
+	transform: scale(1.1);
+}
+
+.content-row-num{
+	position: relative;
+	left: 45%;
+	top: 30%;
+	font-size: x-large;
+}
+.content-row-sign{
+	position: relative;
+	left: 70%;
+	top: 5%;
+}
+.content-bottom{
+	color: white;
+	margin-left: 7%;
+	line-height: 80px;
+}
+
+/* 参考：移入效果 */
+/* div img{
+cursor: pointer;
+transition: all 0.6s;
+}
+div img:hover{
+
+} */

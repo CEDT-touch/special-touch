@@ -1,0 +1,92 @@
+{% load staticfiles %}
+<!--数据上传-->
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800" style="color:#1cc88a!important">新建报告</h1>
+                </div>
+
+                <!-- Content Row -->
+                <div class="row">
+                    <div class="card border-left-success shadow h-100 py-2 col-lg-9" style="margin:0 auto">
+
+
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <div>
+                                    <div style="display:inline-block"><i class="fa fa-check-square-o" style="color:#004fff"></i></div>
+                                    <label  class="col-sm-4 control-label" style="display:inline-block">Step1：下载数据模板:</label>
+                                </div>
+                                <div class="col-sm-9" style="width:60%;margin:0 auto;">
+                                    <select class="form-control" style="display:inline-block;width:70%">
+                                        <option>中国城市产业竞争力指数白皮书</option>
+                                        <option>人工智能核心产业发展白皮书</option>
+                                        <option>中国百强区发展白皮书</option>
+                                        <option>大型节能风扇产业发展白皮书</option>
+                                        <option>5G产业与应用发展白皮书</option>
+                                    </select>
+                                    <a href="javascript:void(0);" class="btn btn-primary btn-icon-split"
+                                         onclick=post_data()" style="width:20%;margin-left:20px;display:inline-block;background-color:#2cd3b1">
+                                         <span class="text" style="width:100%">下载</span>
+                                    </a>
+                                </div>
+
+                            </div>
+<!--                            <div class="form-group" >-->
+<!--                                <div>-->
+<!--                                    <div style="display:inline-block"><i class="fa fa-check-square-o" style="color:#004fff"></i></div>-->
+<!--                                    <label  class="col-sm-4 control-label" style="display:inline-block">Step2：选择报告类型</label>-->
+<!--                                </div>-->
+<!--                                <div class="col-sm-9" style="width:60%;margin:0 auto;">-->
+<!--                                    <select class="form-control">-->
+<!--                                        <option>年报</option>-->
+<!--                                        <option>季报</option>-->
+<!--                                        <option>月报</option>-->
+<!--                                        <option>周报</option>-->
+<!--                                        <option>日报</option>-->
+<!--                                    </select>-->
+<!--                                </div>-->
+<!--                            </div>-->
+                            <div class="form-group">
+                                <div>
+                                    <div style="display:inline-block"><i class="fa fa-check-square-o" style="color:rgba(0,0,0,0.2)"></i></div>
+                                    <label  class="col-sm-4 control-label" style="display:inline-block">Step2：设置报告名称</label>
+                                </div>
+                                <div class="col-sm-9" style="width:60%;margin:0 auto;">
+                                    <input type="text" class="form-control input-large" id="year"
+                                           placeholder="请输入报告名称">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div>
+                                    <div style="display:inline-block"><i class="fa fa-check-square-o" style="color:rgba(0,0,0,0.2)"></i></div>
+                                    <label  class="col-sm-4 control-label" style="display:inline-block">Step3：上传数据</label>
+                                </div>
+                                <div  style="width:56%;margin:0 auto;">
+                                    <form id="input-xlsx" enctype="multipart/form-data">
+                                        <input id="input-file" type="file" name="file"/>
+                                    </form>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="form-group fa-pull-left" align="left" style="width:60%;margin:20px auto;">
+
+                            <a href="javascript:void(0);" class="btn btn-primary btn-icon-split"
+                               onclick=post_data()" style="width:100%;margin:0 auto;">
+                                <span class="text" style="width:100%">生成</span>
+                                <span class="icon text-white-50">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+</div>
+<!-- /.container-fluid -->

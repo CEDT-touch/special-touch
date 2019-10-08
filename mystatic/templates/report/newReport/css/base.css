@@ -1,0 +1,125 @@
+body{
+	background-color:gainsboro;
+}
+.topBar{
+	height: 40px;
+}
+.main{
+	background-color: white;
+	width: 800px;
+	margin: 0 auto;
+}
+.pageTitle{
+	padding-top: 0.6em;
+	margin-bottom: 0.4em;
+	padding-left: 18%;
+}
+.line1{
+	background-color: #7dc2bf ;
+	width: 100%;
+	height: 8px;
+}
+.line2{
+	background-color: #7dc2bf ;
+	height: 8px;
+	width: 80%;
+	margin-left: 10%;
+}
+.title{
+	text-align: center;
+	color: #0a746a;
+	font-size: larger;
+}
+.content{
+	height: 400px;
+}
+.chartContent{
+	width: 360px;
+	height: 250px;
+	/* display: inline-block; */
+	background: rgba(0,0,0,0);
+	/* position: absolute; */
+}
+.login
+{
+    display:none;
+    border:0.1em solid #7dc2bf;
+    height:30%;
+    width:50%;
+    position:absolute;/*让节点脱离文档流,我的理解就是,从页面上浮出来,不再按照文档其它内容布局*/
+    top:24%;/*节点脱离了文档流,如果设置位置需要用top和left,right,bottom定位*/
+    left:24%;
+    z-index:2;/*个人理解为层级关系,由于这个节点要在顶部显示,所以这个值比其余节点的都大*/
+    background: white;
+}
+.over
+{
+    width: 100%;
+    height: 100%;
+    opacity:0.8;/*设置背景色透明度,1为完全不透明,IE需要使用filter:alpha(opacity=80);*/
+    filter:alpha(opacity=80);
+    display: none;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    background: silver;
+}
+#chart1{
+	position: absolute;
+}
+#chart2{
+	position: absolute;
+}
+#export1 {
+	/* 导出按钮 */
+	-moz-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	-webkit-box-shadow: 0px 0px 0px 2px #9fb4f2;
+	box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+	background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e',GradientType=0);
+	background-color:#7892c2;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:5px 8px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+#export1:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #476e9e), color-stop(1, #7892c2));
+	background:-moz-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-webkit-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-o-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-ms-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#476e9e', endColorstr='#7892c2',GradientType=0);
+	background-color:#476e9e;
+}
+#export1:active {
+	position:relative;
+	top:1px;
+}
+#logo1{
+	width:16%;
+	float: left;
+	padding-left: 3px;
+}
+#dv {
+	width:100px;
+	height:100px;
+	background-color:blue;
+	border-radius:50%;
+	position:absolute;
+}

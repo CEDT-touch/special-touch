@@ -1,0 +1,62 @@
+{% load staticfiles %}
+<!-- Begin Page Content -->
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">报告管理</h1>
+        </div>
+        <div class="row" style="width:33%;float:left">
+            <div class="col-xl-9 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <a href="{% url 'report1' %}">
+                                    <h5>
+                                        <span class="data-title">
+                                            医药健康产业2019二月月报
+                                        </span>
+                                    </h5>
+                                  
+                                    <div class="from form-inline">
+                                        <img src="{% static 'img/report-1.jpg'%}" style='width:100%'>
+                                    </div>
+                                    <div class="from form-inline">
+                                        <b>数据来源：</b><span class="from">Internet</span>
+                                    </div>
+                                    <div class="time from form-inline">
+                                        <div><span><b>创建时间：</b>2019-07-05</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        <div class="row" style="width:33%;float:left">
+            <div class="col-xl-9 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <a href="#">
+                                    <h5>
+                                        <span class="data-title">
+                                            2019年第一季度国内经济运行情况
+                                        </span>
+                                    </h5>
+
+                                    <div class="from form-inline">
+                                        <img src="{% static 'img/report-2.jpg'%}" style='width:100%'>
+                                    </div>
+                                    <div class="from form-inline">
+                                        <b>数据来源：</b><span class="from">Internet</span>
+                                    </div>
+                                    <div class="time from form-inline">
+                                        <div><span><b>创建时间：</b>2019-07-05</span></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div>
+
+
+        <!-- /.container-fluid -->
+
+    </div>

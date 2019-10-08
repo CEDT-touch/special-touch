@@ -1,0 +1,316 @@
+{% load staticfiles %}
+<!-- Begin Page Content -->
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">数据图表</h1>
+        </div>
+        <!-- Content Row -->
+        <div class="row">
+
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-9 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            <h4>数据分类</h4>
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800 form-inline">
+                                            <div class="dropdown" style="width:130px">
+                                                <button type="button" class="btn btn-success dropdown-toggle"
+                                                        data-toggle="dropdown" style="width:130px">
+                                                    政治经济
+                                                </button>
+                                                <div class="dropdown-menu" style="width:130px">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            &nbsp;&nbsp;
+                                            <div class="dropdown" style="width:130px">
+                                                <button type="button" class="btn btn-success dropdown-toggle"
+                                                        data-toggle="dropdown" style="width:130px">
+                                                    社会民生
+                                                </button>
+                                                <div class="dropdown-menu" style="width:130px">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            &nbsp;&nbsp;
+                                            <div class="dropdown" style="width:130px">
+                                                <button type="button" class="btn btn-success dropdown-toggle"
+                                                        data-toggle="dropdown" style="width:130px">
+                                                    生产能源
+                                                </button>
+                                                <div class="dropdown-menu" style="width:130px">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            &nbsp;&nbsp;
+                                            <div class="dropdown" style="width:130px">
+                                                <button type="button" class="btn btn-success dropdown-toggle"
+                                                        data-toggle="dropdown" style="width:130px">
+                                                    科学技术
+                                                </button>
+                                                <div class="dropdown-menu" style="width:130px">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            &nbsp;&nbsp;
+                                            <div class="dropdown" style="width:130px">
+                                                <button type="button" class="btn btn-success dropdown-toggle"
+                                                        data-toggle="dropdown" style="width:130px">
+                                                    教育文化
+                                                </button>
+                                                <div class="dropdown-menu" style="width:130px">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            &nbsp;&nbsp;
+                                            <div class="dropdown" style="width:130px">
+                                                <button type="button" class="btn btn-success dropdown-toggle"
+                                                        data-toggle="dropdown" style="width:130px">
+                                                    国际交流
+                                                </button>
+                                                <div class="dropdown-menu" style="width:130px">
+                                                    <a class="dropdown-item" href="#">Link 1</a>
+                                                    <a class="dropdown-item" href="#">Link 2</a>
+                                                    <a class="dropdown-item" href="#">Link 3</a>
+                                                </div>
+                                            </div>
+                                            &nbsp;
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <table class="table1">
+			<tr>
+				<th><div class="row" style="float:left">
+            <div class="col-xl-9 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <a href="{% url 'report1' %}">
+                                    <h5>
+                                        <span class="content-data"></span>
+                                        <span class="data-title">
+                                            医药健康产业20xxX月月报
+                                        </span>
+                                    </h5>
+
+                                    <div class="from form-inline">
+                                        <img src="{% static 'img/report-1.jpg'%}" style='width:100%'>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div></th>
+				<th><div class="row" style="float:left">
+            <div class="col-xl-9 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <a href="{% url 'newReport' %}">
+                                    <h5>
+                                        <span class="content-data"></span>
+                                        <span class="data-title">
+                                            20xx年第X季度国内经济运行情况
+                                        </span>
+                                    </h5>
+
+                                    <div class="from form-inline">
+                                        <img src="{% static 'img/report-2.jpg'%}" style='width:100%'>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div></th>
+				<th><div class="row" style="float:left">
+            <div class="col-xl-9 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <a href="{% url 'report3' %}">
+                                    <h5>
+                                        <span class="content-data"></span>
+                                        <span class="data-title">
+                                            智能制造月度监测报告
+                                        </span>
+                                    </h5>
+
+                                    <div class="from form-inline">
+                                        <img src="{% static 'img/report-3.jpg'%}" style='width:100%'>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div></th>
+                <th><div class="row" style="float:left">
+            <div class="col-xl-9 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <a href="{% url 'report4' %}?id=1&type=4">
+                                    <h5>
+                                        <span class="content-data"></span>
+                                        <span class="data-title">
+                                            20XX年A股半导体公司年报概览
+                                        </span>
+                                    </h5>
+
+                                    <div class="from form-inline">
+                                        <img src="{% static 'img/report-4.jpg'%}" style='width:100%'>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div></th>
+			</tr>
+			<tr>
+                <th><div class="row" style="float:left">
+            <div class="col-xl-9 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <a href="{% url 'report4' %}?id=1&type=7">
+                                    <h5>
+                                        <span class="content-data">「模板7」</span>
+                                        <span class="data-title">
+                                            20XX年国内经济运行情况
+                                        </span>
+                                    </h5>
+
+                                    <div class="from form-inline">
+                                        <img src="{% static 'img/report-7.jpg'%}" style='width:100%'>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div></th>
+                <th><div class="row" style="float:left">
+            <div class="col-xl-9 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <a href="{% url 'report4' %}?id=1&type=8">
+                                    <h5>
+                                        <span class="content-data">「模板8」</span>
+                                        <span class="data-title">
+                                            中国5G产业链专利技术分布检测报告
+                                        </span>
+                                    </h5>
+
+                                    <div class="from form-inline">
+                                        <img src="{% static 'img/report-8.jpg'%}" style='width:100%'>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div></th>
+                <th><div class="row" style="float:left">
+            <div class="col-xl-9 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <a href="{% url 'report4' %}?id=1&type=5">
+                                    <h5>
+                                        <span class="content-data"></span>
+                                        <span class="data-title">
+                                            20xx年人工智能招商月报
+                                        </span>
+                                    </h5>
+
+                                    <div class="from form-inline">
+                                        <img src="{% static 'img/report-5.jpg'%}" style='width:100%'>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div></th>
+                <th><div class="row" style="float:left">
+            <div class="col-xl-9 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <a href="{% url 'report4' %}?id=1&type=6">
+                                    <h5>
+                                        <span class="content-data"></span>
+                                        <span class="data-title">
+                                            20XX年区域宏观经济运行检测
+                                        </span>
+                                    </h5>
+
+                                    <div class="from form-inline">
+                                        <img src="{% static 'img/report-6.jpg'%}" style='width:100%'>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div></th>
+			</tr>
+            <tr>
+
+                <th><div class="row" style="float:left">
+            <div class="col-xl-9 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <a href="{% url 'report4' %}?id=1&type=9">
+                                    <h5>
+                                        <span class="content-data"></span>
+                                        <span class="data-title">
+                                            20XX年中国VC/PE市场区域数据报告
+                                        </span>
+                                    </h5>
+
+                                    <div class="from form-inline">
+                                        <img src="{% static 'img/report-9.jpg'%}" style='width:100%'>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div></th>
+                <th><div class="row" style="float:left">
+            <div class="col-xl-9 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <a href="{% url 'report4' %}?id=1&type=10">
+                                    <h5>
+                                        <span class="content-data"></span>
+                                        <span class="data-title">
+                                            政府及公共服务行业ICT投入洞察
+                                        </span>
+                                    </h5>
+
+                                    <div class="from form-inline">
+                                        <img src="{% static 'img/report-10.jpg'%}" style='width:100%'>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div></th>
+			</tr>
+
+		</table>
+        <!-- /.container-fluid -->
+
+    </div>

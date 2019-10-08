@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>模板2</title>
+		<link rel="stylesheet" href="./css/base.css" />
+		<!-- echarts -->
+		<script src="js/echarts.min.js"></script>
+		<!-- echarts theme files -->
+		<script src="js/theme/macarons.js"></script>
+		<script src="js/theme/infographic.js"></script>
+	</head>
+	<body>
+		<div class="topBar">
+			<button id="export1" name="导出" type="button" style="margin-left:90%;">导出</button>
+		</div>
+		<div class="main">
+			<div class="blank" style="padding-top: 5px;"></div>
+			<div class="bar">
+				<img src="img/logo1.jpg"  id="logo1"/>
+				<p class="pageTitle">
+					2019年第一季度国内经济运行情况
+				</p>
+				<div class="line1"></div>
+			</div>
+			<div class="content">
+				<div class="title">
+					一、2019年第一季度国民经济运行情况
+				</div>
+				<div class="chart">
+					<div class="chartContent" id="chart2" onmouseover="move('chart2')" ondblclick="show('chart2')"></div>
+					<div class="chartContent" id="chart1" onmouseover="move('chart1')" ondblclick="show('chart1')"></div>
+				</div>
+				
+			</div>
+			<div class="line2"></div>
+		</div>
+		<!--弹出层-->
+		<div class="login" id="login">
+			<a href="javascript:hide()">关闭</a>
+			<div class="attribute">
+				<p style="display: inline-block;">标题：</p>
+				<input type="text" value="title" id="title" style="display: inline-block;"/>
+			</div>
+			<div class="attribute">
+				<p style="display: inline-block;">大小：</p>
+				<input type="text" value="55%" id="radius" style="display: inline-block;"/>
+			</div>
+			<button type="button" onclick="hide()">确定</button>
+			<div id="tips">这里是弹窗的内容</div>
+		</div>
+		<div class="over" id="over"></div>
+		
+	<script type="text/javascript">
+        ////基于准备好的dom，初始化echarts实例
+		// 测试数据传递情况
+		var test = 66
+        var myChart1 = echarts.init(document.getElementById('chart1'),'macarons');
+		var myChart2 = echarts.init(document.getElementById('chart2'),'infographic');
+
+        //// 指定图表的配置项和数据
+		//条形图
+        var option2 = {
+            title: {
+                text: '国内生产总值及各产业同比增速',
+				x:'center',
+				textStyle:{
+					fontSize:14,
+				},
+            },
+            tooltip: {},
+            xAxis: {
+                data: ["国内生产总值","第一产业","第二产业","第三产业"],
+				axisLabel:{  
+					interval:0,//横轴信息全部显示  
+					rotate:-15,//-15度角倾斜显示  
+				},
+            },
+            yAxis: {
+				show:false,
+			},
+            series: [{
+                name: '增速',
+                type: 'bar',
+                data: [30,20,36,test],
+				markLine : {
+					data : [
+						{ name: '国内生产总值', xAxis: 0, yAxis: 30, symbol: 'circle'},
+					]
+				},
+				label: {
+					normal: {
+						show: true,
+						position: 'top',
+						formatter:'{c}%',
+					}
+				},
+            }]
+        };
+		//饼图
+		var option1 = {
+			backgroundColor:'rgba(128, 128, 128, 0)', //rgba设置透明度0.1
+			title : {
+				text: '国内生产总值2246684亿元，其中：',
+				x:'center',
+				textStyle:{
+					fontSize:14,
+				},
+			},
+			tooltip : {
+				trigger: 'item',
+				formatter: "{a} <br/>{b} : {c} ({d}%)"
+			},
+			series : [
+				{
+					name: '各产业总值与占比',
+					type: 'pie',
+					radius : '55%',
+					center: ['50%', '60%'],
+					label:{
+						normal:{
+							formatter:'{b}:\n{c}亿元，\n{d}%',
+						}
+					},
+					data:[
+						{value:335, name:'第一产业'},
+						{value:310, name:'第二产业'},
+						{value:234, name:'第三产业'}
+					],
+					itemStyle: {
+						emphasis: {
+							shadowBlur: 10,
+							shadowOffsetX: 0,
+							shadowColor: 'rgba(0, 0, 0, 0.5)',
+						}
+					}
+				}
+			]
+		};
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart1.setOption(option1);
+		myChart2.setOption(option2);
+    </script>
+	<script>
+		////url跳转
+		function changeData(){
+			window.location.href="chartChange.html";
+		}
+	</script>
+	<script type="text/javascript">
+	////弹出层控制
+    function show(chartType)
+    {
+        var login = document.getElementById('login');
+        var over = document.getElementById('over');
+		//测试参数传递
+		//var tip = document.getElementById('tips');
+		//tip.innerHTML = chartType;
+		//tip.innerText = option1['title']['text'];
+		//传递当前图表参数
+		document.getElementById('title').value=option1['title']['text'];
+		document.getElementById('radius').value=option1['series'][0]['radius'];
+        login.style.display = "block";
+        over.style.display = "block";
+    }
+    function hide()
+    {
+        var login = document.getElementById('login');
+        var over = document.getElementById('over');
+		var titleChange = document.getElementById('title').value;
+		//console.log(titleChange);
+		option1['title']['text'] = titleChange;
+		option1['series'][0]['radius'] = document.getElementById('radius').value;
+		console.log(option1);
+		myChart1.setOption(option1);
+		console.log('图表属性更改成功！');
+        login.style.display = "none";
+        over.style.display = "none";
+    }
+	</script>
+	<script src="js/elementMove.js"></script>
+	<script src="js/clicickOrDblclick.js"></script>
+	</body>
+</html>

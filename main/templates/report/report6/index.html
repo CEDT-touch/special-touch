@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!-- 引入静态文件的声明-->
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>report6</title>
+		<meta name="author" content="LiangLiang" />
+		<!-- css -->
+		<link rel="stylesheet" href="{% static 'templates/report/report4/css/base.css' %}" />
+		<link rel="stylesheet" href="{% static 'templates/report/report4/css/mybutton.css' %}" />
+		<link rel="stylesheet" href="{% static 'templates/report/report4/css/custom.css' %}" />
+		<!-- font awesome -->
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<!-- echarts -->
+		<script src="{% static 'templates/report/report4/js/echarts.min.js' %}"></script>
+		<!--js-->
+		<script src="{% static 'templates/report/report4/js/jquery.js' %}"></script>
+		<script src="{% static 'templates/report/report4/js/function.js' %}"></script>
+		<script src="{% static 'templates/report/report4/js/wangEditor.js' %}"></script>
+		
+	</head>
+	<body>
+		<div class="login" id="login" style="display: ;">
+			<div class="editor" id="editor">
+			</div>
+			<div class="loginbutton" id='loginbutton'>
+			</div>
+		</div>
+		<div class="over" id="over"></div>
+		<!--	封面	-->
+		<div class="main">
+			<div class="background" id="frontCover">
+				<div class="Fphoto">
+					<div class="homeLogo"></div>
+					<div class="Ftitle1">
+						<font size="30"  color="white">模板6</font>
+					</div>
+					<div class="Ftitle3">赛迪顾问股份有限公司</div>
+				</div>
+			</div>
+		</div>
+		<!--	目录	-->
+		<div class="main">
+			<div class="background" id="menuCover">
+						<div class="homeLogo"></div>
+							<div class="Ftitle">
+								<font size="30" color="white">目录</font>
+							</div>
+						<table class="Ftable1" >
+		    				<tbody>
+			   					<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle">06</div>
+
+									</td>
+									<td> <i class="fa fa-angle-right"></i></td>
+									<td>
+										<div class="FTstyle2">
+											一、国内半导体行业产业盈利情况分析
+										</div>
+
+									</td>
+			   					</tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle1">06</div></td>
+									<td> </td>
+									<td>
+										（一）国内集成电路产业销售额与美国相比仍存在较大差距
+									</td>
+								</tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+									<div class="FTstyle1">07</div></td>
+									<td> </td>
+									<td>
+										（二）国内前20企业营收与上年持平，长电科技居首位
+									</td>
+								</tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle1">13</div></td>
+									<td> </td>
+									<td>
+										（三）国内半导体企业整体收益质量稳步提升
+									</td>
+								</tr>
+									<td style="border-right: 1px solid #000000;">
+									<td height="10">  </td><td>  </td><td>  </td></tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle">15</div></td>
+									<td> <i class="fa fa-angle-right"></i></td>
+									<td>
+										二、国内半导体企业资本支出分析
+									</td>
+								</tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle1">15</div></td>
+									<td> </td>
+									<td>
+										（一）2018年全球半导体资本支出首次突破千亿美元大关
+									</td>
+								</tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle1">15</div></td>
+									<td> </td>
+									<td>
+										（二）中国半导体产业资本支出全球第二，仅次韩国
+									</td>
+								</tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle1">16</div></td>
+									<td> </td>
+									<td>
+										（三）2018年韩国三星电子资本最高，全球资本支出呈头部集中态势
+									</td>
+								</tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle1">18</div></td>
+									<td> </td>
+									<td>
+										（四）国内半导体上市公司资本支出有待提升
+									</td>
+								</tr>
+								<tr ><td style="border-right: 1px solid #000000;" height="10"> </td><td > </td><td> </td></tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle">21</div></td>
+									<td> <i class="fa fa-angle-right"></i></td>
+									<td>
+										三、国内半导体企业资本支出分析
+									</td>
+								</tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle1">21</div></td>
+									<td> </td>
+									<td>
+										（一）美国企业研发投入全球领先
+									</td>
+								</tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle1">22</div></td>
+									<td> </td>
+									<td>
+				 						（二）国内研发支出明显不足，研发人员缺口巨大
+									</td>
+								</tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle1">26</div></td>
+									<td> </td>
+									<td>
+										（三）国内专利数量逐步增长，北方华创业内领先
+									</td>
+								<tr><td style="border-right: 1px solid #000000;" height="10"> </td><td > </td><td> </td></tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle">27</div></td>
+									<td> <i class="fa fa-angle-right"></i></td>
+									<td>
+										四、总结
+									</td>
+								</tr>
+									<td style="border-right: 1px solid #000000;"><td height="10"> </td><td> </td><td> </td></tr>
+								<tr>
+									<td style="border-right: 1px solid #000000;">
+										<div class="FTstyle">28</div></td>
+									<td> <i class="fa fa-angle-right"></i></td>
+									<td>
+										附录
+									</td>
+								</tr>
+							</tbody>
+						</table>
+			</div>
+		</div>
+		<div id="mainbody"></div>
+		
+		
+	<!-- 侧边菜单 -->	
+	<div class="menu">
+		<button  class="button-1" id="export1" name="导出" type="button" onclick="">导出</button>
+		<button class="button-2" id="save1" name="保存" type="button" onclick="refreshData()">更新</button>
+		<button class="button-3" id="exit1" name="退出" type="button" onclick="">退出</button>
+	</div>
+	</body>
+	<script>
+		report_information = {{ data_list|safe }};
+	</script>
+	<script src="{% static 'templates/report/report4/js/newAction.js' %}"></script>
+</html>

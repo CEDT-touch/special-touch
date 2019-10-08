@@ -1,0 +1,59 @@
+{% load staticfiles %}
+<!-- 右侧内容Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!--加载Topbar-->
+            {% include "./Topbar.html" %}
+
+            <!-- 加载具体内容 -->
+            {% if contentType == "dataList" %}
+                {% include "./MainContent/dataList.html" %}
+            {% elif contentType == "dataUpload"%}
+                {% include "./MainContent/dataUpload.html" %}
+            {% elif contentType == "pie" %}
+                {% include "./MainContent/pyecharts/pie.html" %}
+            {% elif contentType == "polar" %}
+                {% include "./MainContent/pyecharts/polar.html" %}
+            {% elif contentType == "radar" %}
+                {% include "./MainContent/pyecharts/radar.html" %}
+            {% elif contentType == "sankey" %}
+                {% include "./MainContent/pyecharts/sankey.html" %}
+            {% elif contentType == "graph" %}
+                {% include "./MainContent/pyecharts/graph.html" %}
+            {% elif contentType == "wordCloud" %}
+                {% include "./MainContent/pyecharts/wordCloud.html" %}
+            {% elif contentType == "bar" %}
+                {% include "./MainContent/pyecharts/bar.html" %}
+            {% elif contentType == "line" %}
+                {% include "./MainContent/pyecharts/line.html" %}
+            {% elif contentType == "scatter" %}
+                {% include "./MainContent/pyecharts/scatter.html" %}
+            {% elif contentType == "tree" %}
+                {% include "./MainContent/pyecharts/tree.html" %}
+            {% elif contentType == "newReport" %}
+                {% include "./MainContent/newReport.html" %}
+            {% elif contentType == "reportManage" %}
+                {% include "./MainContent/reportManage.html" %}
+            {% else %}
+            {% include "./MainContent/dataList.html" %}
+            {% endif %}
+
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; 赛迪顾问版权所有 2019</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->

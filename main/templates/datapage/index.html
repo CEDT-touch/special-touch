@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!-- 引入静态文件的声明-->
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>datapage</title>
+		<link rel="stylesheet"   href="{% static 'templates/datapage/css/custom.css'  %}"/>
+		<!-- font awesome -->
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="dataPage-top">
+			<div class="dataPage-top-title">
+				<div class="top-title-name">行业报告智能辅助平台</div>
+			</div>
+			<div class="dataPage-top-navigation">
+				<div class="top-navigation-left">
+					<img src="{% static 'templates/datapage/img/logo2.jpg'  %}" />
+				</div>
+				<div class="top-navigation-right">
+					<a href="http://www.famer-business.cn">首页</a> > 数据图表
+				</div>
+				<hr />
+			</div>
+			
+		</div>
+		<div class="dataPage-mainContent">
+			<div class="dataPage-mainContent-info">
+				<div class="mainContent-info-title">
+					2019年第一季度国内经济运行情况
+				</div>
+				<div class="mainContent-info-table">
+					<table>
+						<tr>
+							<td>数据来源：国家统计局</td>
+							<td>所属行业：全行业</td>
+						</tr>
+						<tr>
+							<td>数据日期：2019年9月28日</td>
+						</tr>
+						<tr>
+							<td>数据权限：公开</td>
+						</tr>
+					</table>
+				</div>
+				<div class="mainContent-info-introduction">
+					<p>【摘要】</p>
+					<div class="info-introduction-content">
+						本报告数据均根据4月份国新办举行的“2019年一季度国民经济运行情况发布会” 公布数据进行整理和归纳。
+					</div>
+				</div>
+				<div class="mainContent-info-download">
+					<a href="#"><div class="info-download-down">下载</div></a>
+					<a href="#"><div class="info-download-full">获取全文资源</div></a>
+				</div>
+				<hr />
+			</div>
+			<div class="dataPage-mainContent-table">
+				<table>
+					<tr class="mainContent-table-tr1">
+						<td>
+							每月指数
+						</td>
+						<td>
+							工业
+						</td>
+						<td>
+							国内投资
+						</td>
+						<td>
+							国内贸易
+						</td>
+						<td>
+							全国进出口
+						</td>
+						<td>
+							农业
+						</td>
+						<td>
+							第三产业
+						</td>
+						<td>
+							房地产
+						</td>
+						<td>
+							城镇就业
+						</td>
+						<td>
+							发用电
+						</td>
+						<td>
+							社会信用体系建设
+						</td>
+					</tr>
+					<tr class="mainContent-table-tr2">
+						<td>
+							一月
+						</td>
+						<td>
+							5566
+						</td>
+						<td>
+							546454
+						</td>
+						<td>
+							567578
+						</td>
+						<td>
+							46346
+						</td>
+						<td>
+							3636
+						</td>
+						<td>
+							76843
+						</td>
+						<td>
+							546346
+						</td>
+						<td>
+							45657
+						</td>
+						<td>
+							645745
+						</td>
+						<td>
+							47645
+						</td>
+					</tr>
+					<tr class="mainContent-table-tr3">
+						<td>
+							二月
+						</td>
+						<td>
+							454646
+						</td>
+						<td>
+							54645
+						</td>
+						<td>
+							24334
+						</td>
+						<td>
+							436654
+						</td>
+						<td>
+							56544
+						</td>
+						<td>
+							4466
+						</td>
+						<td>
+							434533
+						</td>
+						<td>
+							56775
+						</td>
+						<td>
+							3345345
+						</td>
+						<td>
+							345466
+						</td>
+					</tr>
+					<tr class="mainContent-table-tr2">
+						<td>
+							三月
+						</td>
+						<td>
+							45436
+						</td>
+						<td>
+							54645
+						</td>
+						<td>
+							4434
+						</td>
+						<td>
+							4343654
+						</td>
+						<td>
+							56345
+						</td>
+						<td>
+							4356
+						</td>
+						<td>
+							44563
+						</td>
+						<td>
+							546775
+						</td>
+						<td>
+							345645
+						</td>
+						<td>
+							567466
+						</td>
+					</tr>
+					<tr class="mainContent-table-tr3">
+						<td>
+							四月
+						</td>
+						<td>
+							5735646
+						</td>
+						<td>
+							86645
+						</td>
+						<td>
+							4344534
+						</td>
+						<td>
+							764584
+						</td>
+						<td>
+							8644
+						</td>
+						<td>
+							486466
+						</td>
+						<td>
+							45653
+						</td>
+						<td>
+							455
+						</td>
+						<td>
+							75345
+						</td>
+						<td>
+							6866
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="dataPage-mainContent-chart">
+				<div class="mainContent-chart-label">
+					<i class="fa fa-bar-chart" aria-hidden="true"></i> 数据推荐
+				</div>
+				<div class="mainContent-chart-content">
+					<table id="table2">
+					</table>
+					
+				</div>
+			</div>
+		</div>
+		<div class="dataPage-bottom">
+			<div class="dataPage-bottom-phone">010-8855904</div>
+			<div class="dataPage-bottom-map"><a href="#">平台首页</a> | <a href="#">赛迪顾问</a> | <a href="#">赛迪网</a></div>
+			<div class="dataPage-bottom-statement">Copyright © 赛迪顾问版权所有 2019</div>
+			<div class="dataPage-bottom-TDC">
+				<img src="{% static 'templates/datapage/img/QR.png'  %}"/>
+				<p>扫码下载本页</p>
+			</div>
+		</div>
+	<script src="{% static 'templates/datapage/js/dataPage.js' %}"></script>
+	<script src="{% static 'templates/datapage/js/echarts.min.js' %}"></script>
+	<script src="{% static 'templates/datapage/js/charts.js' %}"></script>
+	</body>
+</html>

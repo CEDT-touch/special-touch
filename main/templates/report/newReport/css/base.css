@@ -1,0 +1,1110 @@
+body{
+	background-color:gainsboro;
+}
+button{
+	margin: 1%;
+}
+textarea{
+	background:#f5f5f5;
+	margin-top: 2%;
+	border-color: #7dc2bf;
+	box-shadow:0px -0.5px 2px 0px black;
+	
+}
+p{
+	margin: 3%;
+}
+i{
+	padding-right: 5px;
+}
+.logo1{
+	width:16%;
+	/* float: left; */
+	padding-left: 3px;
+	position: absolute;
+}
+.topBar{
+	height: 40px;
+}
+.menu{
+	position: fixed;
+	top: 50%;
+	right: 3%;
+	width: 6%;
+	height: 30%;
+	background-color: #19696d37;
+	text-align: center;
+}
+.main{
+	background-color: white;
+	width: 800px;
+	margin: 45px auto;
+	box-shadow: 0px 5px 12px 0px black;
+}
+.bar{
+	position: relative;
+}
+.pageTitle{
+	/* padding-top: 0.6em;
+	margin-bottom: 0.4em;
+	padding-left: 18%; */
+	position: absolute;
+	top: 2%;
+	left: 18%;
+}
+.chartTitle{
+	position: absolute;
+	top: 15%;
+	left: 55%;
+}
+.bottomTitle{
+	position: absolute;
+	font-size: 25px;
+	color: #2F4F4F;
+	text-shadow: 0px -1px 2px #7aa8aa;
+	font-weight: 600;
+}
+.connectTiele{
+	position: absolute;
+	font-size: 16px;
+	color: #2F4F4F;
+}
+.line1{
+	background-color: #7dc2bf ;
+	width: 100%;
+	height: 8px;
+	position: absolute;
+	top: 37px;
+}
+.line2{
+	background-color: #7dc2bf ;
+	height: 8px;
+	width: 80%;
+	margin-left: 10%;
+}
+.line3{
+	background-color: #7dc2bf ;
+	height: 2px;
+	width: 80%;
+	margin-left: 10%;
+	position: absolute;
+	top: 60%;
+}
+.line4{
+	background-color: #7dc2bf ;
+	height: 2px;
+	width: 80%;
+	margin-left: 10%;
+	position: absolute;
+	bottom: 0;
+}
+.title{
+	/* text-align: center; */
+	color: #0a746a;
+	font-size: larger;
+	position: absolute;
+}
+.content{
+	height: 500px;
+	width: 800px;
+	position: relative;
+}
+.content1{
+	height: 1000px;
+	width: 800px;
+	position: relative;
+}
+.attribute{
+	padding-left: 5%;
+}
+.chartContent{
+	width: 360px;
+	height: 360px;
+	/* display: inline-block; */
+	background: rgba(0,0,0,0);
+	/* position: absolute; */
+}
+.chartContent-inner{
+	width: 150px;
+	height: 110px;
+	background: rgba(0,0,0,0);
+}
+.lineOfBottomOfFrame{
+    background-color: #7dc2bf ;
+	height: 8px;
+	width: 80%;
+	margin-left: 10%;
+	margin-top:-4.2%;
+}
+.login
+{
+    display:none;
+    border:0.1em solid #7dc2bf;
+    height:auto;
+    width:50%;
+    position:absolute;/*让节点脱离文档流,从页面上浮出来,不再按照文档其它内容布局*/
+    top:24%;/*节点脱离了文档流,如果设置位置需要用top和left,right,bottom定位*/
+    left:24%;
+    z-index:2;/*层级关系,由于这个节点要在顶部显示,所以这个值比其余节点的都大*/
+    background: white;
+}
+.over
+{
+    width: 100%;
+    height: 100%;
+    opacity:0.8;/*设置背景色透明度,1为完全不透明,IE需要使用filter:alpha(opacity=80);*/
+    filter:alpha(opacity=80);
+    display: none;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    background: silver;
+}
+.circle1{
+	width: 90px;
+	height: 90px;
+	background: #7aa8aa;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 90px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+.circle1-1{
+	width: 90px;
+	height: 90px;
+	background: #7aa8aa;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 90px;
+	margin-left: 60px;
+	margin-right: 60px;
+}
+.circle2{
+	width: 46px;
+	height: 46px;
+	background: #7aa8aa;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 46px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.circle{
+	width: 200px;
+	height: 200px;
+	background: #7aa8aa;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 200px;
+}
+.zip{
+	position: relative;
+	width: 200px;
+	height: 100px;
+	border:2px dashed #276873;
+	border-radius: 15%;
+}
+.square{
+	width: 100px;
+	height: 150px;
+	background-color: #276873;
+	text-align: center;
+}
+.bias{
+	position:relative;
+	width:55px;
+	height:55px;
+	top: 20%;
+	left: 32%;
+	box-sizing:border-box;
+	border:0px solid #333;
+}
+.bias::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:35px;
+  box-sizing:border-box;
+  border-bottom:1px solid deeppink;
+  transform-origin:bottom center;
+  transform:rotateZ(45deg) scale(1.414);
+  animation:slash 5s infinite ease;
+}
+#mybias-1{
+	width: 130px;
+	height: 130px;
+	top: 42%;
+	left: 55%;
+}
+#mybias-1::before{
+	border-bottom:2px solid yellowgreen;
+	transform:rotateZ(-35deg) scale(1.414);
+}
+#mybias-2{
+	top: 40%;
+	left: 30%;
+	width: 70px;
+	height: 70px;
+}
+#mybias-2::before{
+	border-bottom:2px solid blueviolet;
+	transform:rotateZ(45deg) scale(1.414);
+}
+#square1{
+	position: absolute;
+	top: 35%;
+	left: 55%;
+	border-radius: 10%;
+}
+#circle2{
+	width: 220px;
+	height: 220px;
+	background: #7aa8aa;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 15px;
+	position: absolute;
+	top: 25%;
+	left: 8%;
+}
+#circle3{
+	width: 100px;
+	height: 100px;
+	background: #7aa8aa;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 12px;
+	position: absolute;
+	top: 60%;
+	left: 30%;
+}
+#circle4{
+	width: 120px;
+	height: 120px;
+	background: #7aa8aa;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 12px;
+	position: absolute;
+	top: 60%;
+	left: 75%;
+}
+#circle-city{
+	position: absolute;
+	left: 15%;
+	top: 30%;
+}
+#circle-country{
+	position: absolute;
+	right: 15%;
+	top: 30%;
+}
+#circle-citykezhipei{
+	position: absolute;
+	right: 30%;
+	top: 10%;
+	width: 150px;
+	height: 150px;
+	line-height: 20px;
+}
+#circle-countrykezhipei{
+	position: absolute;
+	right: 25%;
+	top: 50%;
+	width: 120px;
+	height: 120px;
+	line-height: 20px;
+}
+#circle-kezhipeibizhi{
+	position: absolute;
+	right: 8%;
+	top: 40%;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+}
+#circle-renminbishuncha{
+	position: absolute;
+	right: 8%;
+	top: 32%;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+}
+#circle-meiyuanshuncha{
+	position: absolute;
+	right: 8%;
+	top: 67%;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+}
+#circle-fangdichanMianji{
+	position: absolute;
+	right: 15%;
+	top: 30%;
+	line-height: 20px;
+}
+#circle-chengzhenXinzengJiuye{
+	position: absolute;
+	left: 5%;
+	top: 30%;
+}
+#circle-chengzhenShiyeLv{
+	position: absolute;
+	right: 7%;
+	top: 30%;
+}
+#circle-dianli{
+	position: absolute;
+	left: 5%;
+	top: 20%;
+}
+#circle-yongdianliang{
+	position: absolute;
+	right: 7%;
+	top: 20%;
+}
+#circle-yongdian{
+	position: absolute;
+	right: 15%;
+	top: 55%;
+	font-size: 20px;
+}
+#chart1{
+	position: absolute;
+	top: 25%;
+	left: 3%;
+}
+#chart2{
+	position: absolute;
+	top: 25%;
+	left: 50%;
+}
+#chart3{
+	position: absolute;
+	top: 7%;
+	left: 3%;
+}
+#chart4{
+	position: absolute;
+	top: 7%;
+	left: 50%;
+}
+#chart5{
+	position: absolute;
+	top: 62%;
+	left: 3%;
+}
+#chart6{
+	position: absolute;
+	top: 62%;
+	left: 50%;
+}
+#chart7{
+	position: absolute;
+	top: 23%;
+	left: 50%;
+}
+#chart8{
+	position: absolute;
+	top: 10%;
+	left: 5%;
+}
+#chart9{
+	position: absolute;
+	top: 15%;
+	left: 58%;
+}
+#chart10{
+	position: absolute;
+	top: 20%;
+	left: 3%;
+}
+#chart11{
+	position: absolute;
+	top: 20%;
+	left: 47%;
+}
+#chart12{
+	position: absolute;
+	top: 20%;
+	left: 45%;
+}
+#chart13{
+	position: absolute;
+	top: 20%;
+	left: 3%;
+}
+#chart14{
+	position: absolute;
+	top: 1%;
+	left: 32%;
+	width: 500px;
+	height: 300px;
+}
+#chart15{
+	position: absolute;
+	top: 10%;
+	left: 7%;
+	width: 200px;
+	height: 160px;
+	border: 2px dashed #0A746A;
+}
+#chart16{
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	height: 280px;
+}
+#chart17{
+	position: absolute;
+	top: 23%;
+	left:0%;
+}
+#chart18{
+	position: absolute;
+	top: 35%;
+	left:45%;
+	height: 120px;
+	width: 250px;
+}
+#chart19{
+	position: absolute;
+	top: 70%;
+	left:45%;
+	height: 120px;
+	width: 250px;
+}
+#chart20{
+	position: absolute;
+	top: 15%;
+	left:5%;
+	height: 250px;
+	width: 250px;
+}
+#chart21{
+	position: absolute;
+	top: 15%;
+	left:35%;
+	height: 250px;
+	width: 250px;
+}
+#chart22{
+	position: absolute;
+	top: 15%;
+	left:65%;
+	height: 250px;
+	width: 250px;
+}
+#chart23{
+	position: absolute;
+	top: 15%;
+	left:5%;
+	height: 250px;
+	width: 250px;
+}
+#chart24{
+	position: absolute;
+	top: 15%;
+	left:35%;
+	height: 250px;
+	width: 250px;
+}
+#chart25{
+	position: absolute;
+	top: 15%;
+	left:65%;
+	height: 250px;
+	width: 250px;
+}
+#chart26{
+	position: absolute;
+	top: 20%;
+	left:5%;
+	height: 250px;
+	width: 250px;
+}
+#chart27{
+	position: absolute;
+	top: 20%;
+	left:35%;
+	height: 250px;
+	width: 250px;
+}
+#chart28{
+	position: absolute;
+	top: 20%;
+	left:65%;
+	height: 250px;
+	width: 250px;
+}
+#chart29{
+	position: absolute;
+	top: 15%;
+	left:5%;
+	height: 250px;
+	width: 250px;
+}
+#chart30{
+	position: absolute;
+	top: 15%;
+	left:35%;
+	height: 250px;
+	width: 250px;
+}
+#chart31{
+	position: absolute;
+	top: 15%;
+	left:65%;
+	height: 250px;
+	width: 220px;
+}
+#chart32{
+	position: absolute;
+	top: 15%;
+	left:5%;
+	height: 250px;
+	width: 350px;
+}
+#chart33{
+	position: absolute;
+	top: 15%;
+	left:50%;
+	height: 250px;
+	width: 350px;
+}
+#chart34{
+	position: absolute;
+	top: 20%;
+	left:5%;
+	height: 300px;
+	width: 260px;
+}
+#chart35{
+	position: absolute;
+	top: 20%;
+	left:35%;
+	height: 250px;
+	width: 250px;
+}
+#chart36{
+	position: absolute;
+	top: 20%;
+	left:65%;
+	height: 250px;
+	width: 220px;
+}
+#chart37{
+	position: absolute;
+	top: 15%;
+	left:5%;
+	height: 250px;
+	width: 350px;
+}
+#chart38{
+	position: absolute;
+	top: 15%;
+	left:50%;
+	height: 250px;
+	width: 350px;
+}
+#chart39{
+	position: absolute;
+	top: 5%;
+	left:35%;
+	height: 250px;
+	width: 250px;
+}
+#chart40{
+	position: absolute;
+	top: 35%;
+	left:5%;
+	height: 250px;
+	width: 350px;
+}
+#chart41{
+	position: absolute;
+	top: 35%;
+	left:50%;
+	height: 250px;
+	width: 350px;
+}
+#chart42{
+	position: absolute;
+	top: 30%;
+	left:50%;
+	height: 250px;
+}
+#chart47{
+	position: absolute;
+	top: 20%;
+	left:10%;
+	height: 210px;
+	width: 350px;
+}
+#chart48{
+	position: absolute;
+	top: 20%;
+	left:28%;
+	height: 200px;
+}
+#chart49{
+	position: absolute;
+	top: 15%;
+	left:28%;
+	height: 200px;
+}
+#chart50{
+	position: absolute;
+	top: 55%;
+	left:5%;
+	height: 250px;
+}
+#chart51{
+	position: absolute;
+	top: 13%;
+	left:5%;
+	height: 250px;
+}
+#chart52{
+	position: absolute;
+	top: 51%;
+	left:20%;
+	height: 200px;
+	width: 250px;
+	border: 2px dashed blueviolet;
+	border-radius: 20%;
+}
+#chart53{
+	position: absolute;
+	top: 5%;
+	left:40%;
+	height: 250px;
+}
+#chart54{
+	position: absolute;
+	top: 5%;
+	left:60%;
+	height: 250px;
+}
+#chart55{
+	position: absolute;
+	top: 10%;
+	left:5%;
+	height: 200px;
+	width: 200px;
+	border-radius: 20%;
+}
+#chart56{
+	position: absolute;
+	top: 45%;
+	left:5%;
+	height: 250px;
+}
+#chart57{
+	position: absolute;
+	top: 5%;
+	left:25%;
+	height: 250px;
+}
+#title{
+	position: absolute;
+	top: 2%;
+}
+#title1{
+	left: 30%;
+	top: 11%;
+}
+#title3{
+	left: 30%;
+	top: 2%;
+}
+#title4{
+	left: 40%;
+	top: 40%;
+}
+#title6{
+	left: 30%;
+	top: 12%;
+}
+#title8{
+	left: 35%;
+	top: 3%;
+}
+#title9{
+	left: 40%;
+	top: 10%;
+	font-size: 16px;
+}
+#title10{
+	width: 180px;
+	top: 45%;
+	left: 62%;
+}
+#title11{
+	left: 42%;
+	top: 60%;
+}
+#title12{
+	left: 72%;
+	top: 8%;
+	width: 23%;
+}
+#title13{
+	left: 55%;
+	top: 80%;
+	width: 37%;
+}
+#title14{
+	left: 80%;
+	top: 65%;
+	width: 15%;
+}
+#title15{
+	left: 8%;
+	top: 78%;
+	width: 40%;
+}
+#title16{
+	left: 35%;
+	top: 12%;
+	/* width: 40%; */
+}
+#title17{
+	left: 50%;
+	top: 25%;
+}
+#title18{
+	left: 79%;
+	top: 57%;
+}
+#title19{
+	left: 79%;
+	top: 92%;
+}
+#title20{
+	left: 35%;
+	top: 5%;
+	font-size: 16px;
+}
+#title21{
+	left: 35%;
+	top: 5%;
+	font-size: 16px;
+}
+#title22{
+	left: 35%;
+	top: 12%;
+	font-size: 16px;
+}
+#title23{
+	left: 35%;
+	top: 5%;
+	font-size: 16px;
+}
+#title24{
+	left: 20%;
+	top: 5%;
+	font-size: 16px;
+}
+#title25{
+	left: 5%;
+	top: 75%;
+	width: 90%;
+	font-size: 16px;
+}
+#title26{
+	left: 7%;
+	top: 75%;
+	width: 86%;
+	font-size: 16px;
+}
+#title27{
+	left: 32%;
+	top: 5%;
+}
+#title28{
+	left: 60%;
+	top: 15%;
+	width: 30%;
+}
+#title29{
+	left: 32%;
+	top: 15%;
+}
+#title30{
+	left: 7%;
+	top: 88%;
+	width: 86%;
+}
+#title31{
+	left: 35%;
+	top: 5%;
+	font-size: 16px;
+}
+#title32{
+	left: 32%;
+	top: 5%;
+}
+#title33{
+	left: 32%;
+	top: 5%;
+}
+#title34{
+	left: 60%;
+	top: 70%;
+	width: 30%;
+}
+#title35{
+	left: 5%;
+	top: 70%;
+	width: 20%;
+}
+#title36{
+	left: 72%;
+	top: 70%;
+	width: 20%;
+}
+#title37{
+	left: 30%;
+	top: 8%;
+	width: 70%;
+}
+#title38{
+	left: 5%;
+	top: 35%;
+	width: 20%;
+}
+#title39{
+	left: 72%;
+	top: 35%;
+	width: 20%;
+}
+#title40{
+	left: 55%;
+	top: 60%;
+	width: 35%;
+}
+#title41{
+	left: 35%;
+	top: 5%;
+	font-size: 16px;
+}
+#title42{
+	left: 55%;
+	top: 70%;
+	width: 40%;
+}
+#title43{
+	left: 30%;
+	top: 8%;
+	width: 70%;
+}
+#title44{
+	left: 8%;
+	top: 80%;
+	width: 40%;
+}
+#title45{
+	left: 65%;
+	top: 20%;
+	width: 25%;
+	border: 2px dashed darkslategrey;
+	border-radius: 10%;
+	padding: 10px;
+	line-height: 1.5;
+}
+#title46{
+	left: 60%;
+	top: 60%;
+	width: 30%;
+	border: 2px dashed darkslategrey;
+	border-radius: 10%;
+	padding: 10px;
+	line-height: 1.5;
+}
+#title47{
+	left: 67%;
+	top: 55%;
+	font-size: 18px;
+	
+}
+#bottomTitle-1{
+	top: 25%;
+	left: 50%;
+}
+#bottomTitle-2{
+	top: 33%;
+	left: 60%;
+}
+#connectTitle-phone{
+	top: 45%;
+	left: 50%;
+}
+#connectTitle-mail{
+	top: 50%;
+	left: 50%;
+}
+#connectTitle-location{
+	top: 55%;
+	left: 50%;
+}
+}
+#myline3-1{
+	top:99.5%
+}
+#myline3-2{
+	top:99.5%
+}
+#myline3-3{
+	top:99.5%
+}
+#table-zhibiao{
+	position: absolute;
+	top: 43%;
+	left: 5%;
+}
+#table-jiage{
+	position: absolute;
+	top: 67%;
+	left: 5%;
+}
+#table-fourPie{
+	position: absolute;
+	top: 30%;
+	left: 8%;
+}
+#table-tongxinye{
+	position: absolute;
+	top: 28%;
+	left: 8%;
+}
+#QR{
+	position: absolute;
+	left: 12%;
+	top: 25%;
+}
+#dv {
+	width:100px;
+	height:100px;
+	background-color:blue;
+	border-radius:50%;
+	position:absolute;
+}
+/* 首页和目录页 */
+.contentOfHomepage{
+	background:url(../img/homepageBackground.png) no-repeat;
+	background-position: center;
+	background-size: contain;
+	height: 30%;
+	width: 100%;
+	position: relative;
+	top: 30%;
+}
+.barOfHomepage{
+	position: relative;
+	top: 20%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+#logoOfHomepage{
+	width:16%;
+}
+#titleOfHomepage{
+	margin-top: 10px;
+	margin: 0px 0px;
+	width: auto;
+}
+.thinBlackLineOfHomePage{
+	background-color: #0b2e13 ;
+	height: 0.5px;
+	width: 100%;
+	margin-top: 10px;
+}
+.enterpeiseNameAndDate{
+	margin-top: 250px;
+	margin-bottom: 10px;
+	width: auto;
+	text-align:center;
+}
+.contentOfCategoryPage{
+	background-color: white;
+	width: 800px;
+	height: 1000px;
+	margin: 0 auto;
+}
+.centerContentOfCategory{
+	width: 70%;
+	height: auto;
+	margin:0 auto;
+	position: relative;
+	top: 10%;
+}
+.content_one{
+	float: left;
+	margin: 0px 0px;
+	font-size:33px;
+	color: #1b1e21;
+	writing-mode:vertical-rl;
+}
+.content_two{
+	float: left;
+	margin: 30px 0px;
+	font-size:33px;
+	color:#b3b7bb;
+	writing-mode:vertical-rl;
+}
+.content_three{
+	float: left;
+	margin-top: 30px;
+	height: auto;
+	width: 75%;
+	border: 5px solid #b3b7bb;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.itemsInCategory{
+	margin-top: 5px;
+	width: auto;
+	height: auto;
+	float: left;
+	margin: 10px 0px;
+}
+.numOfItemsInCategory{
+	width: 30px;
+	height: 30px;
+	background: #0a746a;
+	font-size:20px;
+	color: #eaecf4;
+	float: left;
+	text-align: center;
+	margin: 0px 6px;
+	border-radius:6px;
+}
+.contentOfItemsInCategory{
+	width: 350px;
+	height: auto;
+	font-size: 18px;
+	color: #0a746a;
+	float: left;
+	word-wrap: break-word;
+    word-break: normal;
+	margin-left: 10px;
+	vertical-align:center;
+	margin: 0px 6px;
+	font-weight:bold;
+}
+#categoryTitle{
+	position: relative;
+	top: 80%;
+	left: 15%;
+	width: 83%;
+	font-size: 15px;
+}
